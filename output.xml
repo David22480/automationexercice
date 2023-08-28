@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.2.1 (Python 3.7.0 on win32)" generated="20230824 16:21:25.698" rpa="false">
+<suite id="s1" name="Tc6 Formulaire Contact" source="d:\AutomationExercice_VS\suite_de_test\formulaire de contact\tc6_formulaire_contact.robot">
+<test id="s1-t1" name="Formulaire contact">
+<kw name="Lancer le navigateur" library="Fuction_Global">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>about:blank</arg>
+<arg>gc</arg>
+</arguments>
+<msg timestamp="20230824 16:21:26.780" level="INFO">Opening browser 'gc' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20230824 16:21:26.778" endtime="20230824 16:21:31.471"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230824 16:21:31.471" endtime="20230824 16:21:31.726"></status>
+</kw>
+<status status="PASS" starttime="20230824 16:21:26.776" endtime="20230824 16:21:31.727"></status>
+</kw>
+<kw name="Accédez à l'URL 'http://automationexercise.com'" library="Fuction_Global">
+<kw name="Go To" library="Selenium2Library">
+<doc>Navigates the active browser instance to the provided ``url``.</doc>
+<arguments>
+<arg>${url_site}</arg>
+</arguments>
+<msg timestamp="20230824 16:21:31.799" level="INFO">Opening url 'http://automationexercise.com'</msg>
+<status status="PASS" starttime="20230824 16:21:31.798" endtime="20230824 16:21:38.701"></status>
+</kw>
+<status status="PASS" starttime="20230824 16:21:31.797" endtime="20230824 16:21:38.702"></status>
+</kw>
+<kw name="Vérifiez que la page d'accueil est visible avec succès" library="Fuction_Global">
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>${bouton_inscrire_seconnecter}</arg>
+<arg>30</arg>
+</arguments>
+<status status="PASS" starttime="20230824 16:21:38.761" endtime="20230824 16:21:39.032"></status>
+</kw>
+<status status="PASS" starttime="20230824 16:21:38.757" endtime="20230824 16:21:39.033"></status>
+</kw>
+<kw name="Cliquez sur le bouton « Contactez-nous »" library="Function_Formulaire_contact">
+<kw name="Click Link" library="Selenium2Library">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>${bouton_contacter_nous_xpth}</arg>
+</arguments>
+<msg timestamp="20230824 16:21:39.042" level="INFO">Clicking link '//a[@href="/contact_us"]'.</msg>
+<status status="PASS" starttime="20230824 16:21:39.040" endtime="20230824 16:21:40.088"></status>
+</kw>
+<status status="PASS" starttime="20230824 16:21:39.039" endtime="20230824 16:21:40.089"></status>
+</kw>
+<kw name="Vérifiez que « GET IN TOUCH » est visible" library="Function_Formulaire_contact">
+<kw name="Element Should Be Visible" library="Selenium2Library">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>${visibilite_GET_IN_TOUCH}</arg>
+</arguments>
+<msg timestamp="20230824 16:21:40.165" level="INFO">Element '(//h2[@class="title text-center"])[1]' is displayed.</msg>
+<status status="PASS" starttime="20230824 16:21:40.101" endtime="20230824 16:21:40.166"></status>
+</kw>
+<status status="PASS" starttime="20230824 16:21:40.100" endtime="20230824 16:21:40.166"></status>
+</kw>
+<status status="PASS" starttime="20230824 16:21:26.775" endtime="20230824 16:21:40.168" critical="yes"></status>
+</test>
+<status status="PASS" starttime="20230824 16:21:25.753" endtime="20230824 16:21:40.171"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0">Critical Tests</stat>
+<stat pass="1" fail="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" id="s1" name="Tc6 Formulaire Contact">Tc6 Formulaire Contact</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

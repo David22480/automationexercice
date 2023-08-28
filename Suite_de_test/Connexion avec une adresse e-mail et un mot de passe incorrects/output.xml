@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.2.1 (Python 3.7.0 on win32)" generated="20230822 14:05:43.060" rpa="false">
+<suite id="s1" name="TC3 Connexion Invalide" source="D:\AutomationExercice_VS\Suite_de_test\Connexion avec une adresse e-mail et un mot de passe incorrects\TC3_Connexion_Invalide.robot">
+<test id="s1-t1" name="Utilisateur de connexion avec une adresse e-mail et un mot de passe incorrects">
+<kw name="Lancer le navigateur" library="Fuction_Global">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>about:blank</arg>
+<arg>gc</arg>
+</arguments>
+<msg timestamp="20230822 14:05:43.528" level="INFO">Opening browser 'gc' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20230822 14:05:43.528" endtime="20230822 14:05:46.338"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230822 14:05:46.338" endtime="20230822 14:05:46.593"></status>
+</kw>
+<status status="PASS" starttime="20230822 14:05:43.528" endtime="20230822 14:05:46.594"></status>
+</kw>
+<kw name="Accédez à l'URL 'http://automationexercise.com'" library="Fuction_Global">
+<kw name="Go To" library="Selenium2Library">
+<doc>Navigates the active browser instance to the provided ``url``.</doc>
+<arguments>
+<arg>${url_site}</arg>
+</arguments>
+<msg timestamp="20230822 14:05:46.606" level="INFO">Opening url 'http://automationexercise.com'</msg>
+<status status="PASS" starttime="20230822 14:05:46.604" endtime="20230822 14:06:36.006"></status>
+</kw>
+<status status="PASS" starttime="20230822 14:05:46.604" endtime="20230822 14:06:36.012"></status>
+</kw>
+<kw name="Vérifiez que la page d'accueil est visible avec succès" library="Fuction_Global">
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>${bouton_inscrire_seconnecter}</arg>
+<arg>30</arg>
+</arguments>
+<status status="PASS" starttime="20230822 14:06:36.017" endtime="20230822 14:06:36.090"></status>
+</kw>
+<status status="PASS" starttime="20230822 14:06:36.017" endtime="20230822 14:06:36.090"></status>
+</kw>
+<kw name="Cliquez sur le bouton 'Inscription / Connexion'" library="Fuction_Global">
+<kw name="Click Link" library="Selenium2Library">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>${bouton_inscrire_seconnecter}</arg>
+</arguments>
+<msg timestamp="20230822 14:06:36.092" level="INFO">Clicking link '//A[@href="/login"]'.</msg>
+<status status="PASS" starttime="20230822 14:06:36.092" endtime="20230822 14:06:37.106"></status>
+</kw>
+<status status="PASS" starttime="20230822 14:06:36.091" endtime="20230822 14:06:37.107"></status>
+</kw>
+<kw name="Vérifiez que &quot;Connexion à votre compte&quot; est visible" library="Fuction_Global">
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>${visibilite_Connexion_compte}</arg>
+</arguments>
+<status status="PASS" starttime="20230822 14:06:37.110" endtime="20230822 14:06:37.179"></status>
+</kw>
+<status status="PASS" starttime="20230822 14:06:37.108" endtime="20230822 14:06:37.180"></status>
+</kw>
+<kw name="Entrez une adresse e-mail et un mot de passe incorrects" library="Function_Connexion_Invalide">
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${email_inscription_xpth}</arg>
+<arg>${email_Incorrect}</arg>
+</arguments>
+<msg timestamp="20230822 14:06:37.181" level="INFO">Typing text 'hhdgggdgg@gmail.com' into text field '(//input[@name="email"])[1]'.</msg>
+<status status="PASS" starttime="20230822 14:06:37.181" endtime="20230822 14:06:37.407"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${password_inscription_xpth}</arg>
+<arg>${password_Incorrect}</arg>
+</arguments>
+<msg timestamp="20230822 14:06:37.408" level="INFO">Typing text 'HHyyyGGGFFFddd' into text field '(//input[@name="password"])[1]'.</msg>
+<status status="PASS" starttime="20230822 14:06:37.408" endtime="20230822 14:06:37.549"></status>
+</kw>
+<status status="PASS" starttime="20230822 14:06:37.180" endtime="20230822 14:06:37.549"></status>
+</kw>
+<kw name="Cliquez sur le_bouton &quot;Connexion&quot;" library="Fuction_Global">
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>${bouton_login_xpth}</arg>
+</arguments>
+<msg timestamp="20230822 14:06:37.549" level="INFO">Clicking button '(//button[@class="btn btn-default"])[1]'.</msg>
+<status status="PASS" starttime="20230822 14:06:37.549" endtime="20230822 14:06:38.520"></status>
+</kw>
+<status status="PASS" starttime="20230822 14:06:37.549" endtime="20230822 14:06:38.521"></status>
+</kw>
+<kw name="Vérifiez l'erreur 'Votre e-mail ou votre mot de passe est incorrect !' est visible" library="Function_Connexion_Invalide">
+<kw name="Element Should Contain" library="Selenium2Library">
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<arguments>
+<arg>${message_erreur_xpat}</arg>
+<arg>Your email or password is incorrect!</arg>
+</arguments>
+<msg timestamp="20230822 14:06:38.594" level="INFO">Element '//p[@style="color: red;"]' contains text 'Your email or password is incorrect!'.</msg>
+<status status="PASS" starttime="20230822 14:06:38.528" endtime="20230822 14:06:38.594"></status>
+</kw>
+<status status="PASS" starttime="20230822 14:06:38.525" endtime="20230822 14:06:38.595"></status>
+</kw>
+<status status="PASS" starttime="20230822 14:05:43.528" endtime="20230822 14:06:38.596" critical="yes"></status>
+</test>
+<status status="PASS" starttime="20230822 14:05:43.062" endtime="20230822 14:06:38.597"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0">Critical Tests</stat>
+<stat pass="1" fail="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" id="s1" name="TC3 Connexion Invalide">TC3 Connexion Invalide</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
