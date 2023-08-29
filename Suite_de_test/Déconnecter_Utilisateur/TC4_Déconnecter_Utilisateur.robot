@@ -15,3 +15,4 @@ deconnexion utilisateur
     Cliquez sur le bouton "Déconnexion"
     Vérifiez que l'utilisateur est dirigé vers la page de connexion
     fermer_navigateur
+   

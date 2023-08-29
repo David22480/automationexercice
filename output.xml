@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 3.2.1 (Python 3.7.0 on win32)" generated="20230824 16:21:25.698" rpa="false">
-<suite id="s1" name="Tc6 Formulaire Contact" source="d:\AutomationExercice_VS\suite_de_test\formulaire de contact\tc6_formulaire_contact.robot">
-<test id="s1-t1" name="Formulaire contact">
+<robot generator="Robot 3.2.1 (Python 3.7.0 on win32)" generated="20230829 16:06:54.883" rpa="false">
+<suite id="s1" name="TC4 Déconnecter Utilisateur" source="d:\AutomationExercice_VS\Suite_de_test\Déconnecter_Utilisateur\TC4_Déconnecter_Utilisateur.robot">
+<test id="s1-t1" name="deconnexion utilisateur">
 <kw name="Lancer le navigateur" library="Fuction_Global">
 <kw name="Open Browser" library="Selenium2Library">
 <doc>Opens a new browser instance to the given ``url``.</doc>
@@ -9,14 +9,14 @@
 <arg>about:blank</arg>
 <arg>gc</arg>
 </arguments>
-<msg timestamp="20230824 16:21:26.780" level="INFO">Opening browser 'gc' to base url 'about:blank'.</msg>
-<status status="PASS" starttime="20230824 16:21:26.778" endtime="20230824 16:21:31.471"></status>
+<msg timestamp="20230829 16:06:56.120" level="INFO">Opening browser 'gc' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20230829 16:06:56.118" endtime="20230829 16:06:59.559"></status>
 </kw>
 <kw name="Maximize Browser Window" library="Selenium2Library">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20230824 16:21:31.471" endtime="20230824 16:21:31.726"></status>
+<status status="PASS" starttime="20230829 16:06:59.560" endtime="20230829 16:06:59.836"></status>
 </kw>
-<status status="PASS" starttime="20230824 16:21:26.776" endtime="20230824 16:21:31.727"></status>
+<status status="PASS" starttime="20230829 16:06:56.117" endtime="20230829 16:06:59.839"></status>
 </kw>
 <kw name="Accédez à l'URL 'http://automationexercise.com'" library="Fuction_Global">
 <kw name="Go To" library="Selenium2Library">
@@ -24,10 +24,10 @@
 <arguments>
 <arg>${url_site}</arg>
 </arguments>
-<msg timestamp="20230824 16:21:31.799" level="INFO">Opening url 'http://automationexercise.com'</msg>
-<status status="PASS" starttime="20230824 16:21:31.798" endtime="20230824 16:21:38.701"></status>
+<msg timestamp="20230829 16:06:59.849" level="INFO">Opening url 'http://automationexercise.com'</msg>
+<status status="PASS" starttime="20230829 16:06:59.848" endtime="20230829 16:08:02.906"></status>
 </kw>
-<status status="PASS" starttime="20230824 16:21:31.797" endtime="20230824 16:21:38.702"></status>
+<status status="PASS" starttime="20230829 16:06:59.847" endtime="20230829 16:08:02.907"></status>
 </kw>
 <kw name="Vérifiez que la page d'accueil est visible avec succès" library="Fuction_Global">
 <kw name="Wait Until Element Is Visible" library="Selenium2Library">
@@ -36,48 +36,111 @@
 <arg>${bouton_inscrire_seconnecter}</arg>
 <arg>30</arg>
 </arguments>
-<status status="PASS" starttime="20230824 16:21:38.761" endtime="20230824 16:21:39.032"></status>
+<status status="PASS" starttime="20230829 16:08:02.909" endtime="20230829 16:08:02.975"></status>
 </kw>
-<status status="PASS" starttime="20230824 16:21:38.757" endtime="20230824 16:21:39.033"></status>
+<status status="PASS" starttime="20230829 16:08:02.908" endtime="20230829 16:08:02.975"></status>
 </kw>
-<kw name="Cliquez sur le bouton « Contactez-nous »" library="Function_Formulaire_contact">
+<kw name="Cliquez sur le bouton 'Inscription / Connexion'" library="Fuction_Global">
 <kw name="Click Link" library="Selenium2Library">
 <doc>Clicks a link identified by ``locator``.</doc>
 <arguments>
-<arg>${bouton_contacter_nous_xpth}</arg>
+<arg>${bouton_inscrire_seconnecter}</arg>
 </arguments>
-<msg timestamp="20230824 16:21:39.042" level="INFO">Clicking link '//a[@href="/contact_us"]'.</msg>
-<status status="PASS" starttime="20230824 16:21:39.040" endtime="20230824 16:21:40.088"></status>
+<msg timestamp="20230829 16:08:02.977" level="INFO">Clicking link '//A[@href="/login"]'.</msg>
+<status status="PASS" starttime="20230829 16:08:02.977" endtime="20230829 16:08:04.086"></status>
 </kw>
-<status status="PASS" starttime="20230824 16:21:39.039" endtime="20230824 16:21:40.089"></status>
+<status status="PASS" starttime="20230829 16:08:02.976" endtime="20230829 16:08:04.088"></status>
 </kw>
-<kw name="Vérifiez que « GET IN TOUCH » est visible" library="Function_Formulaire_contact">
-<kw name="Element Should Be Visible" library="Selenium2Library">
-<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<kw name="Vérifiez que &quot;Connexion à votre compte&quot; est visible" library="Fuction_Global">
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element ``locator`` is visible.</doc>
 <arguments>
-<arg>${visibilite_GET_IN_TOUCH}</arg>
+<arg>${visibilite_Connexion_compte}</arg>
 </arguments>
-<msg timestamp="20230824 16:21:40.165" level="INFO">Element '(//h2[@class="title text-center"])[1]' is displayed.</msg>
-<status status="PASS" starttime="20230824 16:21:40.101" endtime="20230824 16:21:40.166"></status>
+<status status="PASS" starttime="20230829 16:08:04.090" endtime="20230829 16:08:04.150"></status>
 </kw>
-<status status="PASS" starttime="20230824 16:21:40.100" endtime="20230824 16:21:40.166"></status>
+<status status="PASS" starttime="20230829 16:08:04.089" endtime="20230829 16:08:04.151"></status>
 </kw>
-<status status="PASS" starttime="20230824 16:21:26.775" endtime="20230824 16:21:40.168" critical="yes"></status>
+<kw name="Entrez l'adresse e-mail et le mot de passe corrects" library="Fuction_Global">
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${email_inscription_xpth}</arg>
+<arg>${email_inscription_valide_global}</arg>
+</arguments>
+<msg timestamp="20230829 16:08:04.153" level="INFO">Typing text 'daoudchaouch@gmail.com' into text field '(//input[@name="email"])[1]'.</msg>
+<status status="PASS" starttime="20230829 16:08:04.153" endtime="20230829 16:08:04.404"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${password_inscription_xpth}</arg>
+<arg>${password_inscription_valide_global}</arg>
+</arguments>
+<msg timestamp="20230829 16:08:04.405" level="INFO">Typing text 'DavidSofrecom' into text field '(//input[@name="password"])[1]'.</msg>
+<status status="PASS" starttime="20230829 16:08:04.404" endtime="20230829 16:08:04.526"></status>
+</kw>
+<status status="PASS" starttime="20230829 16:08:04.152" endtime="20230829 16:08:04.527"></status>
+</kw>
+<kw name="Cliquez sur le_bouton &quot;Connexion&quot;" library="Fuction_Global">
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>${bouton_login_xpth}</arg>
+</arguments>
+<msg timestamp="20230829 16:08:04.530" level="INFO">Clicking button '(//button[@class="btn btn-default"])[1]'.</msg>
+<status status="PASS" starttime="20230829 16:08:04.528" endtime="20230829 16:08:30.859"></status>
+</kw>
+<status status="PASS" starttime="20230829 16:08:04.527" endtime="20230829 16:08:30.860"></status>
+</kw>
+<kw name="Vérifiez que &quot;Connecté en tant que nom d'utilisateur&quot; est visib" library="Fuction_Global">
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>${verification_visibilite_compte_cree}</arg>
+</arguments>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<msg timestamp="20230829 16:08:30.958" level="FAIL">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=116.0.5845.111)
+</msg>
+<status status="FAIL" starttime="20230829 16:08:30.920" endtime="20230829 16:08:30.964"></status>
+</kw>
+<msg timestamp="20230829 16:08:30.965" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=116.0.5845.111)
+</msg>
+<msg timestamp="20230829 16:08:30.995" level="FAIL">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=116.0.5845.111)
+</msg>
+<status status="FAIL" starttime="20230829 16:08:30.887" endtime="20230829 16:08:30.995"></status>
+</kw>
+<status status="FAIL" starttime="20230829 16:08:30.886" endtime="20230829 16:08:30.998"></status>
+</kw>
+<status status="FAIL" starttime="20230829 16:06:56.115" endtime="20230829 16:08:31.000" critical="yes">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=116.0.5845.111)
+</status>
 </test>
-<status status="PASS" starttime="20230824 16:21:25.753" endtime="20230824 16:21:40.171"></status>
+<status status="FAIL" starttime="20230829 16:06:54.928" endtime="20230829 16:08:31.011"></status>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0">Critical Tests</stat>
-<stat pass="1" fail="0">All Tests</stat>
+<stat pass="0" fail="1">Critical Tests</stat>
+<stat pass="0" fail="1">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" id="s1" name="Tc6 Formulaire Contact">Tc6 Formulaire Contact</stat>
+<stat pass="0" fail="1" id="s1" name="TC4 Déconnecter Utilisateur">TC4 Déconnecter Utilisateur</stat>
 </suite>
 </statistics>
 <errors>
+<msg timestamp="20230829 16:08:30.965" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=116.0.5845.111)
+</msg>
 </errors>
 </robot>
-<!--  -->
