@@ -1,5 +1,6 @@
 
 *** Variables ***
+#VAR GLOBAL
 ${type_browser}    gc   
 ${url_site}    http://automationexercise.com
 ${bouton_inscrire_seconnecter}    //A[@href="/login"]
