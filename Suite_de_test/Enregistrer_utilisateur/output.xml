@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 3.2.1 (Python 3.7.0 on win32)" generated="20230822 10:11:13.304" rpa="false">
+<robot generator="Robot 3.2.1 (Python 3.7.0 on win32)" generated="20230830 14:31:49.562" rpa="false">
 <suite id="s1" name="TC1 Enregistrer utilisateur" source="D:\AutomationExercice_VS\Suite_de_test\Enregistrer_utilisateur\TC1_Enregistrer_utilisateur.robot">
 <test id="s1-t1" name="Cas de test 1 : Enregistrer l'utilisateur">
 <kw name="Lancer le navigateur" library="Fuction_Global">
@@ -9,14 +9,14 @@
 <arg>about:blank</arg>
 <arg>gc</arg>
 </arguments>
-<msg timestamp="20230822 10:11:13.883" level="INFO">Opening browser 'gc' to base url 'about:blank'.</msg>
-<status status="PASS" starttime="20230822 10:11:13.883" endtime="20230822 10:11:16.598"></status>
+<msg timestamp="20230830 14:31:50.692" level="INFO">Opening browser 'gc' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20230830 14:31:50.691" endtime="20230830 14:31:55.747"></status>
 </kw>
 <kw name="Maximize Browser Window" library="Selenium2Library">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20230822 10:11:16.598" endtime="20230822 10:11:16.819"></status>
+<status status="PASS" starttime="20230830 14:31:55.747" endtime="20230830 14:31:55.994"></status>
 </kw>
-<status status="PASS" starttime="20230822 10:11:13.883" endtime="20230822 10:11:16.820"></status>
+<status status="PASS" starttime="20230830 14:31:50.691" endtime="20230830 14:31:55.995"></status>
 </kw>
 <kw name="Accédez à l'URL 'http://automationexercise.com'" library="Fuction_Global">
 <kw name="Go To" library="Selenium2Library">
@@ -24,10 +24,10 @@
 <arguments>
 <arg>${url_site}</arg>
 </arguments>
-<msg timestamp="20230822 10:11:16.879" level="INFO">Opening url 'http://automationexercise.com'</msg>
-<status status="PASS" starttime="20230822 10:11:16.879" endtime="20230822 10:11:20.728"></status>
+<msg timestamp="20230830 14:31:56.003" level="INFO">Opening url 'http://automationexercise.com'</msg>
+<status status="PASS" starttime="20230830 14:31:56.002" endtime="20230830 14:31:59.911"></status>
 </kw>
-<status status="PASS" starttime="20230822 10:11:16.878" endtime="20230822 10:11:20.728"></status>
+<status status="PASS" starttime="20230830 14:31:56.001" endtime="20230830 14:31:59.911"></status>
 </kw>
 <kw name="Vérifiez que la page d'accueil est visible avec succès" library="Fuction_Global">
 <kw name="Wait Until Element Is Visible" library="Selenium2Library">
@@ -36,9 +36,9 @@
 <arg>${bouton_inscrire_seconnecter}</arg>
 <arg>30</arg>
 </arguments>
-<status status="PASS" starttime="20230822 10:11:20.734" endtime="20230822 10:11:20.788"></status>
+<status status="PASS" starttime="20230830 14:31:59.913" endtime="20230830 14:31:59.965"></status>
 </kw>
-<status status="PASS" starttime="20230822 10:11:20.730" endtime="20230822 10:11:20.788"></status>
+<status status="PASS" starttime="20230830 14:31:59.912" endtime="20230830 14:31:59.965"></status>
 </kw>
 <kw name="Cliquez sur le bouton 'Inscription / Connexion'" library="Fuction_Global">
 <kw name="Click Link" library="Selenium2Library">
@@ -46,10 +46,10 @@
 <arguments>
 <arg>${bouton_inscrire_seconnecter}</arg>
 </arguments>
-<msg timestamp="20230822 10:11:20.789" level="INFO">Clicking link '//A[@href="/login"]'.</msg>
-<status status="PASS" starttime="20230822 10:11:20.789" endtime="20230822 10:11:21.290"></status>
+<msg timestamp="20230830 14:31:59.968" level="INFO">Clicking link '//A[@href="/login"]'.</msg>
+<status status="PASS" starttime="20230830 14:31:59.968" endtime="20230830 14:32:00.488"></status>
 </kw>
-<status status="PASS" starttime="20230822 10:11:20.789" endtime="20230822 10:11:21.291"></status>
+<status status="PASS" starttime="20230830 14:31:59.967" endtime="20230830 14:32:00.488"></status>
 </kw>
 <kw name="Vérifiez 'Inscription d'un nouvel utilisateur !' est visible" library="Function_EU">
 <kw name="Wait Until Element Is Visible" library="Selenium2Library">
@@ -58,41 +58,95 @@
 <arg>${visiblite_inscription_nouvelle_uti}</arg>
 <arg>30</arg>
 </arguments>
-<status status="PASS" starttime="20230822 10:11:21.293" endtime="20230822 10:11:21.345"></status>
+<status status="PASS" starttime="20230830 14:32:00.492" endtime="20230830 14:32:00.542"></status>
 </kw>
-<status status="PASS" starttime="20230822 10:11:21.292" endtime="20230822 10:11:21.345"></status>
+<kw name="Delete Cookie" library="Selenium2Library">
+<doc>Deletes cookie matching ``name``.</doc>
+<arguments>
+<arg>name</arg>
+</arguments>
+<status status="PASS" starttime="20230830 14:32:00.543" endtime="20230830 14:32:00.556"></status>
+</kw>
+<kw name="Generate Random String" library="String">
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<arguments>
+<arg>10</arg>
+<arg>[LOWER]</arg>
+</arguments>
+<assign>
+<var>${random_string}</var>
+</assign>
+<msg timestamp="20230830 14:32:00.556" level="INFO">${random_string} = opfvfygqyo</msg>
+<status status="PASS" starttime="20230830 14:32:00.556" endtime="20230830 14:32:00.556"></status>
+</kw>
+<kw name="Catenate" library="BuiltIn">
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<arguments>
+<arg>${random_string}@gmail.com</arg>
+</arguments>
+<assign>
+<var>${email_random}</var>
+</assign>
+<msg timestamp="20230830 14:32:00.557" level="INFO">${email_random} = opfvfygqyo@gmail.com</msg>
+<status status="PASS" starttime="20230830 14:32:00.556" endtime="20230830 14:32:00.557"></status>
+</kw>
+<kw name="Set Suite Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<arguments>
+<arg>${generated_email}</arg>
+<arg>${email_random}</arg>
+</arguments>
+<msg timestamp="20230830 14:32:00.558" level="INFO">${generated_email} = opfvfygqyo@gmail.com</msg>
+<status status="PASS" starttime="20230830 14:32:00.557" endtime="20230830 14:32:00.558"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${generated_email}</arg>
+</arguments>
+<msg timestamp="20230830 14:32:00.559" level="INFO">opfvfygqyo@gmail.com</msg>
+<status status="PASS" starttime="20230830 14:32:00.558" endtime="20230830 14:32:00.559"></status>
+</kw>
+<status status="PASS" starttime="20230830 14:32:00.489" endtime="20230830 14:32:00.559"></status>
 </kw>
 <kw name="Entrez le nom et l'adresse e-mail" library="Function_EU">
+<kw name="Meth generique Entrez l'adresse e-mail et le mot de passe corrects" library="Fuction_Global">
+<arguments>
+<arg>${nom_uti_ins_global}</arg>
+<arg>${generated_email}</arg>
+</arguments>
 <kw name="Input Text" library="Selenium2Library">
 <doc>Types the given ``text`` into text field identified by ``locator``.</doc>
 <arguments>
 <arg>${nom_uti_inscription}</arg>
-<arg>${nom_uti_ins_global}</arg>
+<arg>${nom}</arg>
 </arguments>
-<msg timestamp="20230822 10:11:21.348" level="INFO">Typing text 'daoud' into text field '//input[@data-qa="signup-name"]'.</msg>
-<status status="PASS" starttime="20230822 10:11:21.347" endtime="20230822 10:11:21.503"></status>
+<msg timestamp="20230830 14:32:00.561" level="INFO">Typing text 'daoud' into text field '//input[@data-qa="signup-name"]'.</msg>
+<status status="PASS" starttime="20230830 14:32:00.560" endtime="20230830 14:32:00.711"></status>
 </kw>
 <kw name="Input Text" library="Selenium2Library">
 <doc>Types the given ``text`` into text field identified by ``locator``.</doc>
 <arguments>
 <arg>${Email_inscription}</arg>
-<arg>${Email_Valide_EU}</arg>
+<arg>${adresse_mail}</arg>
 </arguments>
-<msg timestamp="20230822 10:11:21.503" level="INFO">Typing text 'daoudchaouch1@gmail.com' into text field '//input[@data-qa="signup-email"]'.</msg>
-<status status="PASS" starttime="20230822 10:11:21.503" endtime="20230822 10:11:21.681"></status>
+<msg timestamp="20230830 14:32:00.711" level="INFO">Typing text 'opfvfygqyo@gmail.com' into text field '//input[@data-qa="signup-email"]'.</msg>
+<status status="PASS" starttime="20230830 14:32:00.711" endtime="20230830 14:32:00.893"></status>
 </kw>
-<status status="PASS" starttime="20230822 10:11:21.346" endtime="20230822 10:11:21.681"></status>
+<status status="PASS" starttime="20230830 14:32:00.560" endtime="20230830 14:32:00.893"></status>
 </kw>
-<kw name="Cliquez sur le bouton &quot;S'inscrire&quot;" library="Function_EU">
+<status status="PASS" starttime="20230830 14:32:00.559" endtime="20230830 14:32:00.893"></status>
+</kw>
+<kw name="Cliquez sur le bouton &quot;S'inscrire&quot;" library="Fuction_Global">
 <kw name="Click Button" library="Selenium2Library">
 <doc>Clicks button identified by ``locator``.</doc>
 <arguments>
 <arg>${boutton_inscrire}</arg>
 </arguments>
-<msg timestamp="20230822 10:11:21.683" level="INFO">Clicking button '//button[@data-qa="signup-button"]'.</msg>
-<status status="PASS" starttime="20230822 10:11:21.682" endtime="20230822 10:11:22.243"></status>
+<msg timestamp="20230830 14:32:00.895" level="INFO">Clicking button '//button[@data-qa="signup-button"]'.</msg>
+<status status="PASS" starttime="20230830 14:32:00.895" endtime="20230830 14:32:01.255"></status>
 </kw>
-<status status="PASS" starttime="20230822 10:11:21.682" endtime="20230822 10:11:22.243"></status>
+<status status="PASS" starttime="20230830 14:32:00.894" endtime="20230830 14:32:01.257"></status>
 </kw>
 <kw name="Vérifiez que 'ENTER ACCOUNT INFORMATION' est visible" library="Function_EU">
 <kw name="Wait Until Element Is Visible" library="Selenium2Library">
@@ -101,9 +155,9 @@
 <arg>${visibilite_account_information}</arg>
 <arg>30</arg>
 </arguments>
-<status status="PASS" starttime="20230822 10:11:22.245" endtime="20230822 10:11:22.283"></status>
+<status status="PASS" starttime="20230830 14:32:01.261" endtime="20230830 14:32:01.548"></status>
 </kw>
-<status status="PASS" starttime="20230822 10:11:22.244" endtime="20230822 10:11:22.283"></status>
+<status status="PASS" starttime="20230830 14:32:01.259" endtime="20230830 14:32:01.548"></status>
 </kw>
 <kw name="Remplissez les détails : titre, nom, e-mail, mot de passe, date de naissance" library="Function_EU">
 <kw name="Click Element" library="Selenium2Library">
@@ -111,8 +165,8 @@
 <arguments>
 <arg>${radio_button_Mr}</arg>
 </arguments>
-<msg timestamp="20230822 10:11:22.283" level="INFO">Clicking element '//input[@id="id_gender1"]'.</msg>
-<status status="PASS" starttime="20230822 10:11:22.283" endtime="20230822 10:11:22.391"></status>
+<msg timestamp="20230830 14:32:01.552" level="INFO">Clicking element '//input[@id="id_gender1"]'.</msg>
+<status status="PASS" starttime="20230830 14:32:01.552" endtime="20230830 14:32:01.674"></status>
 </kw>
 <kw name="Input Text" library="Selenium2Library">
 <doc>Types the given ``text`` into text field identified by ``locator``.</doc>
@@ -120,8 +174,8 @@
 <arg>${password}</arg>
 <arg>${password_global}</arg>
 </arguments>
-<msg timestamp="20230822 10:11:22.391" level="INFO">Typing text 'DavidSofrecom' into text field '//input[@id="password"]'.</msg>
-<status status="PASS" starttime="20230822 10:11:22.391" endtime="20230822 10:11:22.560"></status>
+<msg timestamp="20230830 14:32:01.675" level="INFO">Typing text 'DavidSofrecom' into text field '//input[@id="password"]'.</msg>
+<status status="PASS" starttime="20230830 14:32:01.675" endtime="20230830 14:32:01.862"></status>
 </kw>
 <kw name="Select From List By Value" library="Selenium2Library">
 <doc>Selects options from selection list ``locator`` by ``values``.</doc>
@@ -129,8 +183,8 @@
 <arg>${list_box_days}</arg>
 <arg>${day_birthsss}</arg>
 </arguments>
-<msg timestamp="20230822 10:11:22.560" level="INFO">Selecting options from selection list '//select[@id="days"]' by value 2.</msg>
-<status status="PASS" starttime="20230822 10:11:22.560" endtime="20230822 10:11:22.695"></status>
+<msg timestamp="20230830 14:32:01.862" level="INFO">Selecting options from selection list '//select[@id="days"]' by value 2.</msg>
+<status status="PASS" starttime="20230830 14:32:01.862" endtime="20230830 14:32:02.032"></status>
 </kw>
 <kw name="Select From List By Value" library="Selenium2Library">
 <doc>Selects options from selection list ``locator`` by ``values``.</doc>
@@ -138,8 +192,8 @@
 <arg>${list_box_month}</arg>
 <arg>${month_birth}</arg>
 </arguments>
-<msg timestamp="20230822 10:11:22.695" level="INFO">Selecting options from selection list '//select[@id="months"]' by value 7.</msg>
-<status status="PASS" starttime="20230822 10:11:22.695" endtime="20230822 10:11:22.837"></status>
+<msg timestamp="20230830 14:32:02.033" level="INFO">Selecting options from selection list '//select[@id="months"]' by value 7.</msg>
+<status status="PASS" starttime="20230830 14:32:02.033" endtime="20230830 14:32:02.169"></status>
 </kw>
 <kw name="Select From List By Value" library="Selenium2Library">
 <doc>Selects options from selection list ``locator`` by ``values``.</doc>
@@ -147,10 +201,10 @@
 <arg>${list_box_year}</arg>
 <arg>${year_birth}</arg>
 </arguments>
-<msg timestamp="20230822 10:11:22.838" level="INFO">Selecting options from selection list '//select[@id="years"]' by value 2000.</msg>
-<status status="PASS" starttime="20230822 10:11:22.838" endtime="20230822 10:11:22.969"></status>
+<msg timestamp="20230830 14:32:02.170" level="INFO">Selecting options from selection list '//select[@id="years"]' by value 2000.</msg>
+<status status="PASS" starttime="20230830 14:32:02.170" endtime="20230830 14:32:02.286"></status>
 </kw>
-<status status="PASS" starttime="20230822 10:11:22.283" endtime="20230822 10:11:22.969"></status>
+<status status="PASS" starttime="20230830 14:32:01.550" endtime="20230830 14:32:02.286"></status>
 </kw>
 <kw name=" Cochez la case 'Inscrivez-vous à notre newsletter !'" library="Function_EU">
 <kw name="Click Element" library="Selenium2Library">
@@ -158,10 +212,10 @@
 <arguments>
 <arg>${chekbox_Sign up for our newsletter!}</arg>
 </arguments>
-<msg timestamp="20230822 10:11:22.969" level="INFO">Clicking element '//input[@id="newsletter"]'.</msg>
-<status status="PASS" starttime="20230822 10:11:22.969" endtime="20230822 10:11:23.048"></status>
+<msg timestamp="20230830 14:32:02.304" level="INFO">Clicking element '//input[@id="newsletter"]'.</msg>
+<status status="PASS" starttime="20230830 14:32:02.303" endtime="20230830 14:32:02.394"></status>
 </kw>
-<status status="PASS" starttime="20230822 10:11:22.969" endtime="20230822 10:11:23.048"></status>
+<status status="PASS" starttime="20230830 14:32:02.302" endtime="20230830 14:32:02.394"></status>
 </kw>
 <kw name="Cochez la case &quot;Recevez les offres spéciales de nos partenaires !&quot;" library="Function_EU">
 <kw name="Click Element" library="Selenium2Library">
@@ -169,10 +223,10 @@
 <arguments>
 <arg>${chekbox_Receive special offers from our partners!}</arg>
 </arguments>
-<msg timestamp="20230822 10:11:23.048" level="INFO">Clicking element '//input[@id="optin"]'.</msg>
-<status status="PASS" starttime="20230822 10:11:23.048" endtime="20230822 10:11:23.146"></status>
+<msg timestamp="20230830 14:32:02.396" level="INFO">Clicking element '//input[@id="optin"]'.</msg>
+<status status="PASS" starttime="20230830 14:32:02.395" endtime="20230830 14:32:02.489"></status>
 </kw>
-<status status="PASS" starttime="20230822 10:11:23.048" endtime="20230822 10:11:23.147"></status>
+<status status="PASS" starttime="20230830 14:32:02.395" endtime="20230830 14:32:02.489"></status>
 </kw>
 <kw name="Remplissez les détails : prénom, nom, société, adresse, adresse2, pays, état, ville, code postal, numéro de téléphone portable" library="Function_EU">
 <kw name="Input Text" library="Selenium2Library">
@@ -181,8 +235,8 @@
 <arg>${prenom_first_name}</arg>
 <arg>${prnom_global}</arg>
 </arguments>
-<msg timestamp="20230822 10:11:23.148" level="INFO">Typing text 'chaouch' into text field '//input[@id="first_name"]'.</msg>
-<status status="PASS" starttime="20230822 10:11:23.148" endtime="20230822 10:11:23.304"></status>
+<msg timestamp="20230830 14:32:02.491" level="INFO">Typing text 'chaouch' into text field '//input[@id="first_name"]'.</msg>
+<status status="PASS" starttime="20230830 14:32:02.491" endtime="20230830 14:32:02.648"></status>
 </kw>
 <kw name="Input Text" library="Selenium2Library">
 <doc>Types the given ``text`` into text field identified by ``locator``.</doc>
@@ -190,8 +244,8 @@
 <arg>${nom_uti_last_name}</arg>
 <arg>${nom_uti_ins_global}</arg>
 </arguments>
-<msg timestamp="20230822 10:11:23.304" level="INFO">Typing text 'daoud' into text field '//input[@id="last_name"]'.</msg>
-<status status="PASS" starttime="20230822 10:11:23.304" endtime="20230822 10:11:23.461"></status>
+<msg timestamp="20230830 14:32:02.650" level="INFO">Typing text 'daoud' into text field '//input[@id="last_name"]'.</msg>
+<status status="PASS" starttime="20230830 14:32:02.649" endtime="20230830 14:32:02.804"></status>
 </kw>
 <kw name="Input Text" library="Selenium2Library">
 <doc>Types the given ``text`` into text field identified by ``locator``.</doc>
@@ -199,8 +253,8 @@
 <arg>${entreprise}</arg>
 <arg>${societe}</arg>
 </arguments>
-<msg timestamp="20230822 10:11:23.462" level="INFO">Typing text 'Sofrecom' into text field '//input[@id="company"]'.</msg>
-<status status="PASS" starttime="20230822 10:11:23.461" endtime="20230822 10:11:23.654"></status>
+<msg timestamp="20230830 14:32:02.806" level="INFO">Typing text 'Sofrecom' into text field '//input[@id="company"]'.</msg>
+<status status="PASS" starttime="20230830 14:32:02.805" endtime="20230830 14:32:03.007"></status>
 </kw>
 <kw name="Input Text" library="Selenium2Library">
 <doc>Types the given ``text`` into text field identified by ``locator``.</doc>
@@ -208,8 +262,8 @@
 <arg>${adress1}</arg>
 <arg>${adr1}</arg>
 </arguments>
-<msg timestamp="20230822 10:11:23.654" level="INFO">Typing text 'les berge du Lac' into text field '//input[@id="address1"]'.</msg>
-<status status="PASS" starttime="20230822 10:11:23.654" endtime="20230822 10:11:23.852"></status>
+<msg timestamp="20230830 14:32:03.009" level="INFO">Typing text 'les berge du Lac' into text field '//input[@id="address1"]'.</msg>
+<status status="PASS" starttime="20230830 14:32:03.008" endtime="20230830 14:32:03.239"></status>
 </kw>
 <kw name="Input Text" library="Selenium2Library">
 <doc>Types the given ``text`` into text field identified by ``locator``.</doc>
@@ -217,8 +271,8 @@
 <arg>${adress2}</arg>
 <arg>${adr2}</arg>
 </arguments>
-<msg timestamp="20230822 10:11:23.852" level="INFO">Typing text 'a' into text field '//input[@id="address2"]'.</msg>
-<status status="PASS" starttime="20230822 10:11:23.852" endtime="20230822 10:11:24.001"></status>
+<msg timestamp="20230830 14:32:03.240" level="INFO">Typing text 'a' into text field '//input[@id="address2"]'.</msg>
+<status status="PASS" starttime="20230830 14:32:03.239" endtime="20230830 14:32:03.401"></status>
 </kw>
 <kw name="Select From List By Label" library="Selenium2Library">
 <doc>Selects options from selection list ``locator`` by ``labels``.</doc>
@@ -226,8 +280,8 @@
 <arg>${list_box_pays}</arg>
 <arg>${pays_valeurs}</arg>
 </arguments>
-<msg timestamp="20230822 10:11:24.001" level="INFO">Selecting options from selection list '//select[@name="country"]' by label Canada.</msg>
-<status status="PASS" starttime="20230822 10:11:24.001" endtime="20230822 10:11:24.124"></status>
+<msg timestamp="20230830 14:32:03.402" level="INFO">Selecting options from selection list '//select[@name="country"]' by label Canada.</msg>
+<status status="PASS" starttime="20230830 14:32:03.402" endtime="20230830 14:32:03.541"></status>
 </kw>
 <kw name="Input Text" library="Selenium2Library">
 <doc>Types the given ``text`` into text field identified by ``locator``.</doc>
@@ -235,8 +289,8 @@
 <arg>${etat}</arg>
 <arg>${etat_global}</arg>
 </arguments>
-<msg timestamp="20230822 10:11:24.124" level="INFO">Typing text 'marié' into text field '//input[@id="state"]'.</msg>
-<status status="PASS" starttime="20230822 10:11:24.124" endtime="20230822 10:11:24.282"></status>
+<msg timestamp="20230830 14:32:03.542" level="INFO">Typing text 'marié' into text field '//input[@id="state"]'.</msg>
+<status status="PASS" starttime="20230830 14:32:03.541" endtime="20230830 14:32:03.751"></status>
 </kw>
 <kw name="Input Text" library="Selenium2Library">
 <doc>Types the given ``text`` into text field identified by ``locator``.</doc>
@@ -244,8 +298,8 @@
 <arg>${ville}</arg>
 <arg>${ville_global}</arg>
 </arguments>
-<msg timestamp="20230822 10:11:24.283" level="INFO">Typing text 'tunis' into text field '//input[@id="city"]'.</msg>
-<status status="PASS" starttime="20230822 10:11:24.282" endtime="20230822 10:11:24.438"></status>
+<msg timestamp="20230830 14:32:03.752" level="INFO">Typing text 'tunis' into text field '//input[@id="city"]'.</msg>
+<status status="PASS" starttime="20230830 14:32:03.752" endtime="20230830 14:32:03.905"></status>
 </kw>
 <kw name="Input Text" library="Selenium2Library">
 <doc>Types the given ``text`` into text field identified by ``locator``.</doc>
@@ -253,8 +307,8 @@
 <arg>${code_postal}</arg>
 <arg>${code_postal_global}</arg>
 </arguments>
-<msg timestamp="20230822 10:11:24.438" level="INFO">Typing text '8000' into text field '//input[@id="zipcode"]'.</msg>
-<status status="PASS" starttime="20230822 10:11:24.438" endtime="20230822 10:11:24.596"></status>
+<msg timestamp="20230830 14:32:03.906" level="INFO">Typing text '8000' into text field '//input[@id="zipcode"]'.</msg>
+<status status="PASS" starttime="20230830 14:32:03.905" endtime="20230830 14:32:04.060"></status>
 </kw>
 <kw name="Input Text" library="Selenium2Library">
 <doc>Types the given ``text`` into text field identified by ``locator``.</doc>
@@ -262,10 +316,10 @@
 <arg>${num_tel}</arg>
 <arg>${num_tel_global}</arg>
 </arguments>
-<msg timestamp="20230822 10:11:24.597" level="INFO">Typing text '72345667' into text field '//input[@id="mobile_number"]'.</msg>
-<status status="PASS" starttime="20230822 10:11:24.596" endtime="20230822 10:11:24.767"></status>
+<msg timestamp="20230830 14:32:04.061" level="INFO">Typing text '72345667' into text field '//input[@id="mobile_number"]'.</msg>
+<status status="PASS" starttime="20230830 14:32:04.061" endtime="20230830 14:32:04.230"></status>
 </kw>
-<status status="PASS" starttime="20230822 10:11:23.148" endtime="20230822 10:11:24.767"></status>
+<status status="PASS" starttime="20230830 14:32:02.490" endtime="20230830 14:32:04.231"></status>
 </kw>
 <kw name="Cliquez sur le bouton &quot;Créer un compte&quot;" library="Function_EU">
 <kw name="Click Button" library="Selenium2Library">
@@ -273,10 +327,10 @@
 <arguments>
 <arg>${bouton_cree_compte}</arg>
 </arguments>
-<msg timestamp="20230822 10:11:24.767" level="INFO">Clicking button '(//button[@type="submit"])[1]'.</msg>
-<status status="PASS" starttime="20230822 10:11:24.767" endtime="20230822 10:11:26.529"></status>
+<msg timestamp="20230830 14:32:04.237" level="INFO">Clicking button '(//button[@type="submit"])[1]'.</msg>
+<status status="PASS" starttime="20230830 14:32:04.236" endtime="20230830 14:32:06.183"></status>
 </kw>
-<status status="PASS" starttime="20230822 10:11:24.767" endtime="20230822 10:11:26.530"></status>
+<status status="PASS" starttime="20230830 14:32:04.235" endtime="20230830 14:32:06.184"></status>
 </kw>
 <kw name="Vérifiez que 'COMPTE CRÉÉ !' est visible" library="Function_EU">
 <kw name="Wait Until Element Is Visible" library="Selenium2Library">
@@ -285,7 +339,7 @@
 <arg>${visibilite_compte_cree}</arg>
 <arg>30</arg>
 </arguments>
-<status status="PASS" starttime="20230822 10:11:26.535" endtime="20230822 10:11:26.587"></status>
+<status status="PASS" starttime="20230830 14:32:06.187" endtime="20230830 14:32:06.230"></status>
 </kw>
 <kw name="Element Should Contain" library="Selenium2Library">
 <doc>Verifies that element ``locator`` contains text ``expected``.</doc>
@@ -293,10 +347,10 @@
 <arg>${visibilite_compte_cree}</arg>
 <arg>Congratulations! Your new account has been successfully</arg>
 </arguments>
-<msg timestamp="20230822 10:11:26.623" level="INFO">Element '//div[@class="col-sm-9 col-sm-offset-1"]' contains text 'Congratulations! Your new account has been successfully'.</msg>
-<status status="PASS" starttime="20230822 10:11:26.587" endtime="20230822 10:11:26.624"></status>
+<msg timestamp="20230830 14:32:06.269" level="INFO">Element '//div[@class="col-sm-9 col-sm-offset-1"]' contains text 'Congratulations! Your new account has been successfully'.</msg>
+<status status="PASS" starttime="20230830 14:32:06.230" endtime="20230830 14:32:06.269"></status>
 </kw>
-<status status="PASS" starttime="20230822 10:11:26.534" endtime="20230822 10:11:26.624"></status>
+<status status="PASS" starttime="20230830 14:32:06.186" endtime="20230830 14:32:06.270"></status>
 </kw>
 <kw name="Cliquez sur le bouton &quot;Continuer&quot;" library="Function_EU">
 <kw name="Click Link" library="Selenium2Library">
@@ -304,10 +358,10 @@
 <arguments>
 <arg>${bouton_continu}</arg>
 </arguments>
-<msg timestamp="20230822 10:11:26.625" level="INFO">Clicking link '//a[@class="btn btn-primary"]'.</msg>
-<status status="PASS" starttime="20230822 10:11:26.625" endtime="20230822 10:11:34.756"></status>
+<msg timestamp="20230830 14:32:06.271" level="INFO">Clicking link '//a[@class="btn btn-primary"]'.</msg>
+<status status="PASS" starttime="20230830 14:32:06.271" endtime="20230830 14:32:09.986"></status>
 </kw>
-<status status="PASS" starttime="20230822 10:11:26.625" endtime="20230822 10:11:34.756"></status>
+<status status="PASS" starttime="20230830 14:32:06.270" endtime="20230830 14:32:09.986"></status>
 </kw>
 <kw name="Vérifiez que &quot;Connecté en tant que nom d'utilisateur&quot; est visib" library="Fuction_Global">
 <kw name="Wait Until Element Is Visible" library="Selenium2Library">
@@ -315,7 +369,7 @@
 <arguments>
 <arg>${verification_visibilite_compte_cree}</arg>
 </arguments>
-<status status="PASS" starttime="20230822 10:11:34.762" endtime="20230822 10:11:34.805"></status>
+<status status="PASS" starttime="20230830 14:32:09.988" endtime="20230830 14:32:10.035"></status>
 </kw>
 <kw name="Element Should Contain" library="Selenium2Library">
 <doc>Verifies that element ``locator`` contains text ``expected``.</doc>
@@ -323,10 +377,10 @@
 <arg>${verification_visibilite_compte_cree}</arg>
 <arg>${nom_uti_ins_global}</arg>
 </arguments>
-<msg timestamp="20230822 10:11:34.840" level="INFO">Element '//ul[@class="nav navbar-nav"]' contains text 'daoud'.</msg>
-<status status="PASS" starttime="20230822 10:11:34.805" endtime="20230822 10:11:34.841"></status>
+<msg timestamp="20230830 14:32:10.078" level="INFO">Element '//ul[@class="nav navbar-nav"]' contains text 'daoud'.</msg>
+<status status="PASS" starttime="20230830 14:32:10.035" endtime="20230830 14:32:10.078"></status>
 </kw>
-<status status="PASS" starttime="20230822 10:11:34.762" endtime="20230822 10:11:34.841"></status>
+<status status="PASS" starttime="20230830 14:32:09.987" endtime="20230830 14:32:10.078"></status>
 </kw>
 <kw name="Cliquez sur le bouton &quot;Supprimer le compte&quot;" library="Fuction_Global">
 <kw name="Click Link" library="Selenium2Library">
@@ -334,17 +388,17 @@
 <arguments>
 <arg>${bouton_Supprimer_compte}</arg>
 </arguments>
-<msg timestamp="20230822 10:11:34.844" level="INFO">Clicking link '//a[@href="/delete_account"]'.</msg>
-<status status="PASS" starttime="20230822 10:11:34.843" endtime="20230822 10:11:35.805"></status>
+<msg timestamp="20230830 14:32:10.082" level="INFO">Clicking link '//a[@href="/delete_account"]'.</msg>
+<status status="PASS" starttime="20230830 14:32:10.082" endtime="20230830 14:32:10.578"></status>
 </kw>
 <kw name="Wait Until Element Is Visible" library="Selenium2Library">
 <doc>Waits until element ``locator`` is visible.</doc>
 <arguments>
 <arg>${verification_visibilite_compte_supprimer}</arg>
 </arguments>
-<status status="PASS" starttime="20230822 10:11:35.805" endtime="20230822 10:11:35.844"></status>
+<status status="PASS" starttime="20230830 14:32:10.578" endtime="20230830 14:32:10.617"></status>
 </kw>
-<status status="PASS" starttime="20230822 10:11:34.842" endtime="20230822 10:11:35.844"></status>
+<status status="PASS" starttime="20230830 14:32:10.080" endtime="20230830 14:32:10.617"></status>
 </kw>
 <kw name="Vérifiez que 'COMPTE SUPPRIMÉ !' est visible et cliquez sur le bouton 'Continuer'" library="Fuction_Global">
 <kw name="Element Should Contain" library="Selenium2Library">
@@ -353,29 +407,36 @@
 <arg>${verification_visibilite_compte_supprimer}</arg>
 <arg>Your account has been permanently deleted!</arg>
 </arguments>
-<msg timestamp="20230822 10:11:35.879" level="INFO">Element '//div[@class="col-sm-9 col-sm-offset-1"]' contains text 'Your account has been permanently deleted!'.</msg>
-<status status="PASS" starttime="20230822 10:11:35.844" endtime="20230822 10:11:35.879"></status>
+<msg timestamp="20230830 14:32:10.649" level="INFO">Element '//div[@class="col-sm-9 col-sm-offset-1"]' contains text 'Your account has been permanently deleted!'.</msg>
+<status status="PASS" starttime="20230830 14:32:10.617" endtime="20230830 14:32:10.649"></status>
 </kw>
 <kw name="Click Link" library="Selenium2Library">
 <doc>Clicks a link identified by ``locator``.</doc>
 <arguments>
 <arg>${bouton_continu_sup}</arg>
 </arguments>
-<msg timestamp="20230822 10:11:35.880" level="INFO">Clicking link '//a[@class="btn btn-primary"]'.</msg>
-<status status="PASS" starttime="20230822 10:11:35.880" endtime="20230822 10:11:39.140"></status>
+<msg timestamp="20230830 14:32:10.649" level="INFO">Clicking link '//a[@class="btn btn-primary"]'.</msg>
+<status status="PASS" starttime="20230830 14:32:10.649" endtime="20230830 14:32:14.318"></status>
 </kw>
 <kw name="Wait Until Element Is Visible" library="Selenium2Library">
 <doc>Waits until element ``locator`` is visible.</doc>
 <arguments>
 <arg>${page_home}</arg>
 </arguments>
-<status status="PASS" starttime="20230822 10:11:39.141" endtime="20230822 10:11:39.184"></status>
+<status status="PASS" starttime="20230830 14:32:14.318" endtime="20230830 14:32:14.356"></status>
 </kw>
-<status status="PASS" starttime="20230822 10:11:35.844" endtime="20230822 10:11:39.184"></status>
+<status status="PASS" starttime="20230830 14:32:10.617" endtime="20230830 14:32:14.357"></status>
 </kw>
-<status status="PASS" starttime="20230822 10:11:13.883" endtime="20230822 10:11:39.185" critical="yes"></status>
+<kw name="fermer_navigateur" library="Fuction_Global">
+<kw name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230830 14:32:14.358" endtime="20230830 14:32:18.142"></status>
+</kw>
+<status status="PASS" starttime="20230830 14:32:14.357" endtime="20230830 14:32:18.143"></status>
+</kw>
+<status status="PASS" starttime="20230830 14:31:50.689" endtime="20230830 14:32:18.145" critical="yes"></status>
 </test>
-<status status="PASS" starttime="20230822 10:11:13.319" endtime="20230822 10:11:39.188"></status>
+<status status="PASS" starttime="20230830 14:31:49.577" endtime="20230830 14:32:18.152"></status>
 </suite>
 <statistics>
 <total>

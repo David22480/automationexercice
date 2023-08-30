@@ -3,7 +3,6 @@ Library    Selenium2Library
 Library    String
 Library    BuiltIn
 Resource    ../Config_Global/Config_global.robot
-   
 
 
 *** Keywords ***
