@@ -1,7 +1,8 @@
 *** Settings ***
 Resource    ../Config_Formulaire_contact/Config_Formulaire_contact.robot
-
+#Library    SeleniumLibrary
 Library    Selenium2Library
+Library    OperatingSystem
 
 *** Keywords ***
 Cliquez sur le bouton « Contactez-nous »
@@ -14,6 +15,10 @@ Vérifiez que « GET IN TOUCH » est visible
      Input Text    ${subject_contacter_nous_xpth}    testnom
      Input Text    ${message_contacter_nous_xpath}    zzzzzzzzzzzzzzzzzzzzzzz
 Téléchargez le fichier
+    
+    Choose File    ${bouton_choisir_fichier_xpath}    D:\test.txt
+
+   
    
 
      
