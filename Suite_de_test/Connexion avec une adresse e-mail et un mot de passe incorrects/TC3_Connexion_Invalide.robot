@@ -13,6 +13,5 @@ Utilisateur de connexion avec une adresse e-mail et un mot de passe incorrects
     Cliquez sur le bouton "Connexion"
     Vérifiez l'erreur 'Votre e-mail ou votre mot de passe est incorrect !' est visible
     fermer_navigateur
-    # hello world
-
+    # test done 
 
