@@ -10,3 +10,4 @@ Formulaire contact
     Vérifiez que la page d'accueil est visible avec succès
     Cliquez sur le bouton « Contactez-nous »
     Vérifiez que « GET IN TOUCH » est visible
+    fermer_navigateur

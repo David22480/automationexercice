@@ -19,6 +19,7 @@ Cas de test 2: Connectez-vous avec l'adresse e-mail et le mot de passe corrects
     Vérifiez que "Connecté en tant que nom d'utilisateur" est visib
     # Cliquez sur le bouton "Supprimer le compte"
     # Vérifiez que 'COMPTE SUPPRIMÉ !' est visible et cliquez sur le bouton 'Continuer'
+    fermer_navigateur
     
     
    

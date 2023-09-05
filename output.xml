@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 3.2.1 (Python 3.7.0 on win32)" generated="20230824 16:21:25.698" rpa="false">
-<suite id="s1" name="Tc6 Formulaire Contact" source="d:\AutomationExercice_VS\suite_de_test\formulaire de contact\tc6_formulaire_contact.robot">
-<test id="s1-t1" name="Formulaire contact">
+<robot generator="Robot 3.2.1 (Python 3.7.0 on win32)" generated="20230905 17:34:30.937" rpa="false">
+<suite id="s1" name="Suite de test" source="D:\AutomationExercice_VS\Suite_de_test">
+<suite id="s1-s1" name="Connectez-vous avec l'adresse e-mail et le mot de passe corrects" source="D:\AutomationExercice_VS\Suite_de_test\Connectez-vous avec l'adresse e-mail et le mot de passe corrects">
+<suite id="s1-s1-s1" name="TC2 Connexion valide" source="D:\AutomationExercice_VS\Suite_de_test\Connectez-vous avec l'adresse e-mail et le mot de passe corrects\TC2_Connexion_valide.robot">
+<test id="s1-s1-s1-t1" name="Cas de test 2: Connectez-vous avec l'adresse e-mail et le mot de passe corrects">
 <kw name="Lancer le navigateur" library="Fuction_Global">
 <kw name="Open Browser" library="Selenium2Library">
 <doc>Opens a new browser instance to the given ``url``.</doc>
@@ -9,14 +11,14 @@
 <arg>about:blank</arg>
 <arg>gc</arg>
 </arguments>
-<msg timestamp="20230824 16:21:26.780" level="INFO">Opening browser 'gc' to base url 'about:blank'.</msg>
-<status status="PASS" starttime="20230824 16:21:26.778" endtime="20230824 16:21:31.471"></status>
+<msg timestamp="20230905 17:34:32.052" level="INFO">Opening browser 'gc' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20230905 17:34:32.052" endtime="20230905 17:34:34.950"></status>
 </kw>
 <kw name="Maximize Browser Window" library="Selenium2Library">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20230824 16:21:31.471" endtime="20230824 16:21:31.726"></status>
+<status status="PASS" starttime="20230905 17:34:34.951" endtime="20230905 17:34:35.158"></status>
 </kw>
-<status status="PASS" starttime="20230824 16:21:26.776" endtime="20230824 16:21:31.727"></status>
+<status status="PASS" starttime="20230905 17:34:32.052" endtime="20230905 17:34:35.160"></status>
 </kw>
 <kw name="Accédez à l'URL 'http://automationexercise.com'" library="Fuction_Global">
 <kw name="Go To" library="Selenium2Library">
@@ -24,10 +26,10 @@
 <arguments>
 <arg>${url_site}</arg>
 </arguments>
-<msg timestamp="20230824 16:21:31.799" level="INFO">Opening url 'http://automationexercise.com'</msg>
-<status status="PASS" starttime="20230824 16:21:31.798" endtime="20230824 16:21:38.701"></status>
+<msg timestamp="20230905 17:34:35.168" level="INFO">Opening url 'http://automationexercise.com'</msg>
+<status status="PASS" starttime="20230905 17:34:35.165" endtime="20230905 17:34:39.963"></status>
 </kw>
-<status status="PASS" starttime="20230824 16:21:31.797" endtime="20230824 16:21:38.702"></status>
+<status status="PASS" starttime="20230905 17:34:35.163" endtime="20230905 17:34:39.964"></status>
 </kw>
 <kw name="Vérifiez que la page d'accueil est visible avec succès" library="Fuction_Global">
 <kw name="Wait Until Element Is Visible" library="Selenium2Library">
@@ -36,9 +38,907 @@
 <arg>${bouton_inscrire_seconnecter}</arg>
 <arg>30</arg>
 </arguments>
-<status status="PASS" starttime="20230824 16:21:38.761" endtime="20230824 16:21:39.032"></status>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<msg timestamp="20230905 17:34:40.030" level="FAIL">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=116.0.5845.141)
+</msg>
+<status status="FAIL" starttime="20230905 17:34:39.988" endtime="20230905 17:34:40.031"></status>
 </kw>
-<status status="PASS" starttime="20230824 16:21:38.757" endtime="20230824 16:21:39.033"></status>
+<msg timestamp="20230905 17:34:40.031" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=116.0.5845.141)
+</msg>
+<msg timestamp="20230905 17:34:40.046" level="FAIL">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=116.0.5845.141)
+</msg>
+<status status="FAIL" starttime="20230905 17:34:39.965" endtime="20230905 17:34:40.046"></status>
+</kw>
+<status status="FAIL" starttime="20230905 17:34:39.964" endtime="20230905 17:34:40.047"></status>
+</kw>
+<status status="FAIL" starttime="20230905 17:34:32.052" endtime="20230905 17:34:40.047" critical="yes">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=116.0.5845.141)
+</status>
+</test>
+<status status="FAIL" starttime="20230905 17:34:31.106" endtime="20230905 17:34:40.050"></status>
+</suite>
+<status status="FAIL" starttime="20230905 17:34:31.097" endtime="20230905 17:34:40.056"></status>
+</suite>
+<suite id="s1-s2" name="Connexion avec une adresse e-mail et un mot de passe incorrects" source="D:\AutomationExercice_VS\Suite_de_test\Connexion avec une adresse e-mail et un mot de passe incorrects">
+<suite id="s1-s2-s1" name="TC3 Connexion Invalide" source="D:\AutomationExercice_VS\Suite_de_test\Connexion avec une adresse e-mail et un mot de passe incorrects\TC3_Connexion_Invalide.robot">
+<test id="s1-s2-s1-t1" name="Utilisateur de connexion avec une adresse e-mail et un mot de passe incorrects">
+<kw name="Lancer le navigateur" library="Fuction_Global">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>about:blank</arg>
+<arg>gc</arg>
+</arguments>
+<msg timestamp="20230905 17:34:40.192" level="INFO">Opening browser 'gc' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20230905 17:34:40.190" endtime="20230905 17:34:44.231"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230905 17:34:44.231" endtime="20230905 17:34:44.453"></status>
+</kw>
+<status status="PASS" starttime="20230905 17:34:40.188" endtime="20230905 17:34:44.453"></status>
+</kw>
+<kw name="Accédez à l'URL 'http://automationexercise.com'" library="Fuction_Global">
+<kw name="Go To" library="Selenium2Library">
+<doc>Navigates the active browser instance to the provided ``url``.</doc>
+<arguments>
+<arg>${url_site}</arg>
+</arguments>
+<msg timestamp="20230905 17:34:44.460" level="INFO">Opening url 'http://automationexercise.com'</msg>
+<status status="PASS" starttime="20230905 17:34:44.455" endtime="20230905 17:34:48.093"></status>
+</kw>
+<status status="PASS" starttime="20230905 17:34:44.454" endtime="20230905 17:34:48.093"></status>
+</kw>
+<kw name="Vérifiez que la page d'accueil est visible avec succès" library="Fuction_Global">
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>${bouton_inscrire_seconnecter}</arg>
+<arg>30</arg>
+</arguments>
+<status status="PASS" starttime="20230905 17:34:48.094" endtime="20230905 17:34:48.177"></status>
+</kw>
+<status status="PASS" starttime="20230905 17:34:48.093" endtime="20230905 17:34:48.177"></status>
+</kw>
+<kw name="Cliquez sur le bouton 'Inscription / Connexion'" library="Fuction_Global">
+<kw name="Click Link" library="Selenium2Library">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>${bouton_inscrire_seconnecter}</arg>
+</arguments>
+<msg timestamp="20230905 17:34:48.180" level="INFO">Clicking link '//A[@href="/login"]'.</msg>
+<status status="PASS" starttime="20230905 17:34:48.179" endtime="20230905 17:34:48.787"></status>
+</kw>
+<status status="PASS" starttime="20230905 17:34:48.177" endtime="20230905 17:34:48.788"></status>
+</kw>
+<kw name="Vérifiez que &quot;Connexion à votre compte&quot; est visible" library="Fuction_Global">
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>${visibilite_Connexion_compte}</arg>
+</arguments>
+<status status="PASS" starttime="20230905 17:34:48.790" endtime="20230905 17:34:48.867"></status>
+</kw>
+<status status="PASS" starttime="20230905 17:34:48.788" endtime="20230905 17:34:48.867"></status>
+</kw>
+<kw name="Entrez une adresse e-mail et un mot de passe incorrects" library="Function_Connexion_Invalide">
+<kw name="Meth generique insert email et mot de pass invalide" library="Fuction_Global">
+<arguments>
+<arg>${email_Incorrect}</arg>
+<arg>${password_Incorrect}</arg>
+</arguments>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${email_inscription_xpth}</arg>
+<arg>${email_invalide}</arg>
+</arguments>
+<msg timestamp="20230905 17:34:48.867" level="INFO">Typing text 'hhdgggdgg@gmail.com' into text field '(//input[@name="email"])[1]'.</msg>
+<status status="PASS" starttime="20230905 17:34:48.867" endtime="20230905 17:34:49.194"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${password_inscription_xpth}</arg>
+<arg>${password_invalide}</arg>
+</arguments>
+<msg timestamp="20230905 17:34:49.196" level="INFO">Typing text 'HHyyyGGGFFFddd' into text field '(//input[@name="password"])[1]'.</msg>
+<status status="PASS" starttime="20230905 17:34:49.195" endtime="20230905 17:34:49.436"></status>
+</kw>
+<status status="PASS" starttime="20230905 17:34:48.867" endtime="20230905 17:34:49.436"></status>
+</kw>
+<status status="PASS" starttime="20230905 17:34:48.867" endtime="20230905 17:34:49.436"></status>
+</kw>
+<kw name="Cliquez sur le_bouton &quot;Connexion&quot;" library="Fuction_Global">
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>${bouton_login_xpth}</arg>
+</arguments>
+<msg timestamp="20230905 17:34:49.436" level="INFO">Clicking button '(//button[@class="btn btn-default"])[1]'.</msg>
+<status status="PASS" starttime="20230905 17:34:49.436" endtime="20230905 17:34:49.953"></status>
+</kw>
+<status status="PASS" starttime="20230905 17:34:49.436" endtime="20230905 17:34:49.954"></status>
+</kw>
+<kw name="Vérifiez l'erreur 'Votre e-mail ou votre mot de passe est incorrect !' est visible" library="Function_Connexion_Invalide">
+<kw name="Element Should Contain" library="Selenium2Library">
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<arguments>
+<arg>${message_erreur_xpat}</arg>
+<arg>Your email or password is incorrect!</arg>
+</arguments>
+<msg timestamp="20230905 17:34:50.040" level="INFO">Element '//p[@style="color: red;"]' contains text 'Your email or password is incorrect!'.</msg>
+<status status="PASS" starttime="20230905 17:34:49.955" endtime="20230905 17:34:50.040"></status>
+</kw>
+<status status="PASS" starttime="20230905 17:34:49.954" endtime="20230905 17:34:50.040"></status>
+</kw>
+<kw name="fermer_navigateur" library="Fuction_Global">
+<kw name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230905 17:34:50.041" endtime="20230905 17:34:54.478"></status>
+</kw>
+<status status="PASS" starttime="20230905 17:34:50.041" endtime="20230905 17:34:54.479"></status>
+</kw>
+<status status="PASS" starttime="20230905 17:34:40.184" endtime="20230905 17:34:54.479" critical="yes"></status>
+</test>
+<status status="PASS" starttime="20230905 17:34:40.070" endtime="20230905 17:34:54.481"></status>
+</suite>
+<status status="PASS" starttime="20230905 17:34:40.059" endtime="20230905 17:34:54.487"></status>
+</suite>
+<suite id="s1-s3" name="Déconnecter Utilisateur" source="D:\AutomationExercice_VS\Suite_de_test\Déconnecter_Utilisateur">
+<suite id="s1-s3-s1" name="TC4 Déconnecter Utilisateur" source="D:\AutomationExercice_VS\Suite_de_test\Déconnecter_Utilisateur\TC4_Déconnecter_Utilisateur.robot">
+<test id="s1-s3-s1-t1" name="deconnexion utilisateur">
+<kw name="Lancer le navigateur" library="Fuction_Global">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>about:blank</arg>
+<arg>gc</arg>
+</arguments>
+<msg timestamp="20230905 17:34:54.566" level="INFO">Opening browser 'gc' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20230905 17:34:54.565" endtime="20230905 17:34:59.260"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230905 17:34:59.261" endtime="20230905 17:34:59.505"></status>
+</kw>
+<status status="PASS" starttime="20230905 17:34:54.563" endtime="20230905 17:34:59.505"></status>
+</kw>
+<kw name="Accédez à l'URL 'http://automationexercise.com'" library="Fuction_Global">
+<kw name="Go To" library="Selenium2Library">
+<doc>Navigates the active browser instance to the provided ``url``.</doc>
+<arguments>
+<arg>${url_site}</arg>
+</arguments>
+<msg timestamp="20230905 17:34:59.505" level="INFO">Opening url 'http://automationexercise.com'</msg>
+<status status="PASS" starttime="20230905 17:34:59.505" endtime="20230905 17:35:03.110"></status>
+</kw>
+<status status="PASS" starttime="20230905 17:34:59.505" endtime="20230905 17:35:03.110"></status>
+</kw>
+<kw name="Vérifiez que la page d'accueil est visible avec succès" library="Fuction_Global">
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>${bouton_inscrire_seconnecter}</arg>
+<arg>30</arg>
+</arguments>
+<status status="PASS" starttime="20230905 17:35:03.113" endtime="20230905 17:35:03.256"></status>
+</kw>
+<status status="PASS" starttime="20230905 17:35:03.111" endtime="20230905 17:35:03.258"></status>
+</kw>
+<kw name="Cliquez sur le bouton 'Inscription / Connexion'" library="Fuction_Global">
+<kw name="Click Link" library="Selenium2Library">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>${bouton_inscrire_seconnecter}</arg>
+</arguments>
+<msg timestamp="20230905 17:35:03.258" level="INFO">Clicking link '//A[@href="/login"]'.</msg>
+<status status="PASS" starttime="20230905 17:35:03.258" endtime="20230905 17:35:03.905"></status>
+</kw>
+<status status="PASS" starttime="20230905 17:35:03.258" endtime="20230905 17:35:03.905"></status>
+</kw>
+<kw name="Vérifiez que &quot;Connexion à votre compte&quot; est visible" library="Fuction_Global">
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>${visibilite_Connexion_compte}</arg>
+</arguments>
+<status status="PASS" starttime="20230905 17:35:03.907" endtime="20230905 17:35:04.009"></status>
+</kw>
+<status status="PASS" starttime="20230905 17:35:03.906" endtime="20230905 17:35:04.009"></status>
+</kw>
+<kw name="Entrez l'adresse e-mail et le mot de passe corrects" library="Fuction_Global">
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${email_inscription_xpth}</arg>
+<arg>${email_inscription_valide_global}</arg>
+</arguments>
+<msg timestamp="20230905 17:35:04.012" level="INFO">Typing text 'daoudchaouch@gmail.com' into text field '(//input[@name="email"])[1]'.</msg>
+<status status="PASS" starttime="20230905 17:35:04.011" endtime="20230905 17:35:04.258"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${password_inscription_xpth}</arg>
+<arg>${password_inscription_valide_global}</arg>
+</arguments>
+<msg timestamp="20230905 17:35:04.259" level="INFO">Typing text 'DavidSofrecom' into text field '(//input[@name="password"])[1]'.</msg>
+<status status="PASS" starttime="20230905 17:35:04.259" endtime="20230905 17:35:04.537"></status>
+</kw>
+<status status="PASS" starttime="20230905 17:35:04.010" endtime="20230905 17:35:04.537"></status>
+</kw>
+<kw name="Cliquez sur le_bouton &quot;Connexion&quot;" library="Fuction_Global">
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>${bouton_login_xpth}</arg>
+</arguments>
+<msg timestamp="20230905 17:35:04.539" level="INFO">Clicking button '(//button[@class="btn btn-default"])[1]'.</msg>
+<status status="PASS" starttime="20230905 17:35:04.538" endtime="20230905 17:35:07.085"></status>
+</kw>
+<status status="PASS" starttime="20230905 17:35:04.537" endtime="20230905 17:35:07.086"></status>
+</kw>
+<kw name="Vérifiez que &quot;Connecté en tant que nom d'utilisateur&quot; est visib" library="Fuction_Global">
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>${verification_visibilite_compte_cree}</arg>
+</arguments>
+<status status="PASS" starttime="20230905 17:35:07.087" endtime="20230905 17:35:07.175"></status>
+</kw>
+<kw name="Element Should Contain" library="Selenium2Library">
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<arguments>
+<arg>${verification_visibilite_compte_cree}</arg>
+<arg>${nom_uti_ins_global}</arg>
+</arguments>
+<msg timestamp="20230905 17:35:07.322" level="INFO">Element '//ul[@class="nav navbar-nav"]' contains text 'daoud'.</msg>
+<status status="PASS" starttime="20230905 17:35:07.175" endtime="20230905 17:35:07.322"></status>
+</kw>
+<status status="PASS" starttime="20230905 17:35:07.086" endtime="20230905 17:35:07.322"></status>
+</kw>
+<kw name="Cliquez sur le bouton &quot;Déconnexion&quot;" library="Function_deconnecter_utilisateur">
+<kw name="Click Link" library="Selenium2Library">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>${bouton_se_deconnecter_xpth}</arg>
+</arguments>
+<msg timestamp="20230905 17:35:07.322" level="INFO">Clicking link '//a[@href="/logout"]'.</msg>
+<status status="PASS" starttime="20230905 17:35:07.322" endtime="20230905 17:35:08.806"></status>
+</kw>
+<status status="PASS" starttime="20230905 17:35:07.322" endtime="20230905 17:35:08.806"></status>
+</kw>
+<kw name="Vérifiez que l'utilisateur est dirigé vers la page de connexion" library="Function_deconnecter_utilisateur">
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>${visibilite_Connexion_compte}</arg>
+<arg>20</arg>
+</arguments>
+<status status="PASS" starttime="20230905 17:35:08.807" endtime="20230905 17:35:09.164"></status>
+</kw>
+<status status="PASS" starttime="20230905 17:35:08.806" endtime="20230905 17:35:09.164"></status>
+</kw>
+<kw name="fermer_navigateur" library="Fuction_Global">
+<kw name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230905 17:35:09.165" endtime="20230905 17:35:13.426"></status>
+</kw>
+<status status="PASS" starttime="20230905 17:35:09.164" endtime="20230905 17:35:13.427"></status>
+</kw>
+<status status="PASS" starttime="20230905 17:34:54.561" endtime="20230905 17:35:13.427" critical="yes"></status>
+</test>
+<status status="PASS" starttime="20230905 17:34:54.499" endtime="20230905 17:35:13.427"></status>
+</suite>
+<status status="PASS" starttime="20230905 17:34:54.490" endtime="20230905 17:35:13.427"></status>
+</suite>
+<suite id="s1-s4" name="Enregistrer un utilisateur avec une adresse e-mail existante" source="D:\AutomationExercice_VS\Suite_de_test\Enregistrer un utilisateur avec une adresse e-mail existante">
+<suite id="s1-s4-s1" name="TC5 enregister utilisateur mail-existante" source="D:\AutomationExercice_VS\Suite_de_test\Enregistrer un utilisateur avec une adresse e-mail existante\TC5_enregister_utilisateur_mail-existante.robot">
+<test id="s1-s4-s1-t1" name="Enregistrer un utilisateur avec une adresse e-mail existante/Function_EU_Email_Exisitante">
+<kw name="Lancer le navigateur" library="Fuction_Global">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>about:blank</arg>
+<arg>gc</arg>
+</arguments>
+<msg timestamp="20230905 17:35:13.505" level="INFO">Opening browser 'gc' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20230905 17:35:13.504" endtime="20230905 17:35:17.482"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230905 17:35:17.482" endtime="20230905 17:35:17.835"></status>
+</kw>
+<status status="PASS" starttime="20230905 17:35:13.503" endtime="20230905 17:35:17.836"></status>
+</kw>
+<kw name="Accédez à l'URL 'http://automationexercise.com'" library="Fuction_Global">
+<kw name="Go To" library="Selenium2Library">
+<doc>Navigates the active browser instance to the provided ``url``.</doc>
+<arguments>
+<arg>${url_site}</arg>
+</arguments>
+<msg timestamp="20230905 17:35:17.838" level="INFO">Opening url 'http://automationexercise.com'</msg>
+<status status="PASS" starttime="20230905 17:35:17.837" endtime="20230905 17:35:21.672"></status>
+</kw>
+<status status="PASS" starttime="20230905 17:35:17.836" endtime="20230905 17:35:21.672"></status>
+</kw>
+<kw name="Vérifiez que la page d'accueil est visible avec succès" library="Fuction_Global">
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>${bouton_inscrire_seconnecter}</arg>
+<arg>30</arg>
+</arguments>
+<status status="PASS" starttime="20230905 17:35:21.674" endtime="20230905 17:35:21.767"></status>
+</kw>
+<status status="PASS" starttime="20230905 17:35:21.673" endtime="20230905 17:35:21.767"></status>
+</kw>
+<kw name="Cliquez sur le bouton 'Inscription / Connexion'" library="Fuction_Global">
+<kw name="Click Link" library="Selenium2Library">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>${bouton_inscrire_seconnecter}</arg>
+</arguments>
+<msg timestamp="20230905 17:35:21.769" level="INFO">Clicking link '//A[@href="/login"]'.</msg>
+<status status="PASS" starttime="20230905 17:35:21.768" endtime="20230905 17:35:22.388"></status>
+</kw>
+<status status="PASS" starttime="20230905 17:35:21.767" endtime="20230905 17:35:22.388"></status>
+</kw>
+<kw name="Entrez uti avec une adresse e-mail existante" library="Function_EU_Email_Exisitante">
+<kw name="Meth generique Entrez l'adresse e-mail et le mot de passe corrects" library="Fuction_Global">
+<arguments>
+<arg>${nom_uti_ins_global}</arg>
+<arg>${Email_Valide_EU}</arg>
+</arguments>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${nom_uti_inscription}</arg>
+<arg>${nom}</arg>
+</arguments>
+<msg timestamp="20230905 17:35:22.394" level="INFO">Typing text 'daoud' into text field '//input[@data-qa="signup-name"]'.</msg>
+<status status="PASS" starttime="20230905 17:35:22.394" endtime="20230905 17:35:22.650"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${Email_inscription}</arg>
+<arg>${adresse_mail}</arg>
+</arguments>
+<msg timestamp="20230905 17:35:22.651" level="INFO">Typing text 'daoudchaouch1@gmail.com' into text field '//input[@data-qa="signup-email"]'.</msg>
+<status status="PASS" starttime="20230905 17:35:22.650" endtime="20230905 17:35:22.950"></status>
+</kw>
+<status status="PASS" starttime="20230905 17:35:22.392" endtime="20230905 17:35:22.950"></status>
+</kw>
+<status status="PASS" starttime="20230905 17:35:22.390" endtime="20230905 17:35:22.950"></status>
+</kw>
+<kw name="Cliquez sur le bouton &quot;S'inscrire&quot;" library="Fuction_Global">
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>${boutton_inscrire}</arg>
+</arguments>
+<msg timestamp="20230905 17:35:22.952" level="INFO">Clicking button '//button[@data-qa="signup-button"]'.</msg>
+<status status="PASS" starttime="20230905 17:35:22.951" endtime="20230905 17:35:23.636"></status>
+</kw>
+<status status="PASS" starttime="20230905 17:35:22.951" endtime="20230905 17:35:23.638"></status>
+</kw>
+<kw name="Affichage msg erreur email adress existante" library="Function_EU_Email_Exisitante">
+<kw name="Element Should Be Visible" library="Selenium2Library">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>${msg_erreur_email_existante_xpth}</arg>
+</arguments>
+<msg timestamp="20230905 17:35:23.765" level="INFO">Element '//p[@style="color: red;"]' is displayed.</msg>
+<status status="PASS" starttime="20230905 17:35:23.640" endtime="20230905 17:35:23.765"></status>
+</kw>
+<kw name="Element Should Contain" library="Selenium2Library">
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<arguments>
+<arg>${msg_erreur_email_existante_xpth}</arg>
+<arg>Email Address already exist!</arg>
+</arguments>
+<msg timestamp="20230905 17:35:23.832" level="INFO">Element '//p[@style="color: red;"]' contains text 'Email Address already exist!'.</msg>
+<status status="PASS" starttime="20230905 17:35:23.765" endtime="20230905 17:35:23.832"></status>
+</kw>
+<status status="PASS" starttime="20230905 17:35:23.638" endtime="20230905 17:35:23.834"></status>
+</kw>
+<status status="PASS" starttime="20230905 17:35:13.501" endtime="20230905 17:35:23.834" critical="yes"></status>
+</test>
+<status status="PASS" starttime="20230905 17:35:13.444" endtime="20230905 17:35:23.836"></status>
+</suite>
+<status status="PASS" starttime="20230905 17:35:13.427" endtime="20230905 17:35:23.842"></status>
+</suite>
+<suite id="s1-s5" name="Enregistrer utilisateur" source="D:\AutomationExercice_VS\Suite_de_test\Enregistrer_utilisateur">
+<suite id="s1-s5-s1" name="TC1 Enregistrer utilisateur" source="D:\AutomationExercice_VS\Suite_de_test\Enregistrer_utilisateur\TC1_Enregistrer_utilisateur.robot">
+<test id="s1-s5-s1-t1" name="Cas de test 1 : Enregistrer l'utilisateur">
+<kw name="Lancer le navigateur" library="Fuction_Global">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>about:blank</arg>
+<arg>gc</arg>
+</arguments>
+<msg timestamp="20230905 17:35:23.950" level="INFO">Opening browser 'gc' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20230905 17:35:23.949" endtime="20230905 17:35:28.458"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230905 17:35:28.458" endtime="20230905 17:35:28.801"></status>
+</kw>
+<status status="PASS" starttime="20230905 17:35:23.948" endtime="20230905 17:35:28.802"></status>
+</kw>
+<kw name="Accédez à l'URL 'http://automationexercise.com'" library="Fuction_Global">
+<kw name="Go To" library="Selenium2Library">
+<doc>Navigates the active browser instance to the provided ``url``.</doc>
+<arguments>
+<arg>${url_site}</arg>
+</arguments>
+<msg timestamp="20230905 17:35:28.804" level="INFO">Opening url 'http://automationexercise.com'</msg>
+<status status="PASS" starttime="20230905 17:35:28.803" endtime="20230905 17:35:32.056"></status>
+</kw>
+<status status="PASS" starttime="20230905 17:35:28.802" endtime="20230905 17:35:32.057"></status>
+</kw>
+<kw name="Vérifiez que la page d'accueil est visible avec succès" library="Fuction_Global">
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>${bouton_inscrire_seconnecter}</arg>
+<arg>30</arg>
+</arguments>
+<status status="PASS" starttime="20230905 17:35:32.058" endtime="20230905 17:35:32.140"></status>
+</kw>
+<status status="PASS" starttime="20230905 17:35:32.057" endtime="20230905 17:35:32.140"></status>
+</kw>
+<kw name="Cliquez sur le bouton 'Inscription / Connexion'" library="Fuction_Global">
+<kw name="Click Link" library="Selenium2Library">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>${bouton_inscrire_seconnecter}</arg>
+</arguments>
+<msg timestamp="20230905 17:35:32.142" level="INFO">Clicking link '//A[@href="/login"]'.</msg>
+<status status="PASS" starttime="20230905 17:35:32.141" endtime="20230905 17:35:32.664"></status>
+</kw>
+<status status="PASS" starttime="20230905 17:35:32.141" endtime="20230905 17:35:32.665"></status>
+</kw>
+<kw name="Vérifiez 'Inscription d'un nouvel utilisateur !' est visible" library="Function_EU">
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>${visiblite_inscription_nouvelle_uti}</arg>
+<arg>30</arg>
+</arguments>
+<status status="PASS" starttime="20230905 17:35:32.668" endtime="20230905 17:35:32.750"></status>
+</kw>
+<kw name="Delete Cookie" library="Selenium2Library">
+<doc>Deletes cookie matching ``name``.</doc>
+<arguments>
+<arg>name</arg>
+</arguments>
+<status status="PASS" starttime="20230905 17:35:32.751" endtime="20230905 17:35:32.771"></status>
+</kw>
+<kw name="Generate Random String" library="String">
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<arguments>
+<arg>10</arg>
+<arg>[LOWER]</arg>
+</arguments>
+<assign>
+<var>${random_string}</var>
+</assign>
+<msg timestamp="20230905 17:35:32.771" level="INFO">${random_string} = rqamarvunn</msg>
+<status status="PASS" starttime="20230905 17:35:32.771" endtime="20230905 17:35:32.771"></status>
+</kw>
+<kw name="Catenate" library="BuiltIn">
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<arguments>
+<arg>${random_string}@gmail.com</arg>
+</arguments>
+<assign>
+<var>${email_random}</var>
+</assign>
+<msg timestamp="20230905 17:35:32.771" level="INFO">${email_random} = rqamarvunn@gmail.com</msg>
+<status status="PASS" starttime="20230905 17:35:32.771" endtime="20230905 17:35:32.771"></status>
+</kw>
+<kw name="Set Suite Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<arguments>
+<arg>${generated_email}</arg>
+<arg>${email_random}</arg>
+</arguments>
+<msg timestamp="20230905 17:35:32.771" level="INFO">${generated_email} = rqamarvunn@gmail.com</msg>
+<status status="PASS" starttime="20230905 17:35:32.771" endtime="20230905 17:35:32.779"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${generated_email}</arg>
+</arguments>
+<msg timestamp="20230905 17:35:32.779" level="INFO">rqamarvunn@gmail.com</msg>
+<status status="PASS" starttime="20230905 17:35:32.779" endtime="20230905 17:35:32.779"></status>
+</kw>
+<status status="PASS" starttime="20230905 17:35:32.666" endtime="20230905 17:35:32.779"></status>
+</kw>
+<kw name="Entrez le nom et l'adresse e-mail" library="Function_EU">
+<kw name="Meth generique Entrez l'adresse e-mail et le mot de passe corrects" library="Fuction_Global">
+<arguments>
+<arg>${nom_uti_ins_global}</arg>
+<arg>${generated_email}</arg>
+</arguments>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${nom_uti_inscription}</arg>
+<arg>${nom}</arg>
+</arguments>
+<msg timestamp="20230905 17:35:32.784" level="INFO">Typing text 'daoud' into text field '//input[@data-qa="signup-name"]'.</msg>
+<status status="PASS" starttime="20230905 17:35:32.781" endtime="20230905 17:35:33.057"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${Email_inscription}</arg>
+<arg>${adresse_mail}</arg>
+</arguments>
+<msg timestamp="20230905 17:35:33.058" level="INFO">Typing text 'rqamarvunn@gmail.com' into text field '//input[@data-qa="signup-email"]'.</msg>
+<status status="PASS" starttime="20230905 17:35:33.057" endtime="20230905 17:35:33.302"></status>
+</kw>
+<status status="PASS" starttime="20230905 17:35:32.781" endtime="20230905 17:35:33.303"></status>
+</kw>
+<status status="PASS" starttime="20230905 17:35:32.781" endtime="20230905 17:35:33.303"></status>
+</kw>
+<kw name="Cliquez sur le bouton &quot;S'inscrire&quot;" library="Fuction_Global">
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>${boutton_inscrire}</arg>
+</arguments>
+<msg timestamp="20230905 17:35:33.306" level="INFO">Clicking button '//button[@data-qa="signup-button"]'.</msg>
+<status status="PASS" starttime="20230905 17:35:33.305" endtime="20230905 17:35:33.881"></status>
+</kw>
+<status status="PASS" starttime="20230905 17:35:33.304" endtime="20230905 17:35:33.882"></status>
+</kw>
+<kw name="Vérifiez que 'ENTER ACCOUNT INFORMATION' est visible" library="Function_EU">
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>${visibilite_account_information}</arg>
+<arg>30</arg>
+</arguments>
+<status status="PASS" starttime="20230905 17:35:33.883" endtime="20230905 17:35:33.962"></status>
+</kw>
+<status status="PASS" starttime="20230905 17:35:33.882" endtime="20230905 17:35:33.963"></status>
+</kw>
+<kw name="Remplissez les détails : titre, nom, e-mail, mot de passe, date de naissance" library="Function_EU">
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${radio_button_Mr}</arg>
+</arguments>
+<msg timestamp="20230905 17:35:33.964" level="INFO">Clicking element '//input[@id="id_gender1"]'.</msg>
+<status status="PASS" starttime="20230905 17:35:33.964" endtime="20230905 17:35:34.075"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${password}</arg>
+<arg>${password_global}</arg>
+</arguments>
+<msg timestamp="20230905 17:35:34.075" level="INFO">Typing text 'DavidSofrecom' into text field '//input[@id="password"]'.</msg>
+<status status="PASS" starttime="20230905 17:35:34.075" endtime="20230905 17:35:34.278"></status>
+</kw>
+<kw name="Select From List By Value" library="Selenium2Library">
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<arguments>
+<arg>${list_box_days}</arg>
+<arg>${day_birthsss}</arg>
+</arguments>
+<msg timestamp="20230905 17:35:34.279" level="INFO">Selecting options from selection list '//select[@id="days"]' by value 2.</msg>
+<status status="PASS" starttime="20230905 17:35:34.279" endtime="20230905 17:35:34.462"></status>
+</kw>
+<kw name="Select From List By Value" library="Selenium2Library">
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<arguments>
+<arg>${list_box_month}</arg>
+<arg>${month_birth}</arg>
+</arguments>
+<msg timestamp="20230905 17:35:34.463" level="INFO">Selecting options from selection list '//select[@id="months"]' by value 7.</msg>
+<status status="PASS" starttime="20230905 17:35:34.462" endtime="20230905 17:35:34.657"></status>
+</kw>
+<kw name="Select From List By Value" library="Selenium2Library">
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<arguments>
+<arg>${list_box_year}</arg>
+<arg>${year_birth}</arg>
+</arguments>
+<msg timestamp="20230905 17:35:34.659" level="INFO">Selecting options from selection list '//select[@id="years"]' by value 2000.</msg>
+<status status="PASS" starttime="20230905 17:35:34.658" endtime="20230905 17:35:34.826"></status>
+</kw>
+<status status="PASS" starttime="20230905 17:35:33.963" endtime="20230905 17:35:34.827"></status>
+</kw>
+<kw name=" Cochez la case 'Inscrivez-vous à notre newsletter !'" library="Function_EU">
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${chekbox_Sign up for our newsletter!}</arg>
+</arguments>
+<msg timestamp="20230905 17:35:34.829" level="INFO">Clicking element '//input[@id="newsletter"]'.</msg>
+<status status="PASS" starttime="20230905 17:35:34.828" endtime="20230905 17:35:34.990"></status>
+</kw>
+<status status="PASS" starttime="20230905 17:35:34.827" endtime="20230905 17:35:34.990"></status>
+</kw>
+<kw name="Cochez la case &quot;Recevez les offres spéciales de nos partenaires !&quot;" library="Function_EU">
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${chekbox_Receive special offers from our partners!}</arg>
+</arguments>
+<msg timestamp="20230905 17:35:34.992" level="INFO">Clicking element '//input[@id="optin"]'.</msg>
+<status status="PASS" starttime="20230905 17:35:34.992" endtime="20230905 17:35:35.127"></status>
+</kw>
+<status status="PASS" starttime="20230905 17:35:34.991" endtime="20230905 17:35:35.127"></status>
+</kw>
+<kw name="Remplissez les détails : prénom, nom, société, adresse, adresse2, pays, état, ville, code postal, numéro de téléphone portable" library="Function_EU">
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${prenom_first_name}</arg>
+<arg>${prnom_global}</arg>
+</arguments>
+<msg timestamp="20230905 17:35:35.129" level="INFO">Typing text 'chaouch' into text field '//input[@id="first_name"]'.</msg>
+<status status="PASS" starttime="20230905 17:35:35.129" endtime="20230905 17:35:35.363"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${nom_uti_last_name}</arg>
+<arg>${nom_uti_ins_global}</arg>
+</arguments>
+<msg timestamp="20230905 17:35:35.364" level="INFO">Typing text 'daoud' into text field '//input[@id="last_name"]'.</msg>
+<status status="PASS" starttime="20230905 17:35:35.363" endtime="20230905 17:35:35.607"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${entreprise}</arg>
+<arg>${societe}</arg>
+</arguments>
+<msg timestamp="20230905 17:35:35.608" level="INFO">Typing text 'Sofrecom' into text field '//input[@id="company"]'.</msg>
+<status status="PASS" starttime="20230905 17:35:35.607" endtime="20230905 17:35:35.856"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${adress1}</arg>
+<arg>${adr1}</arg>
+</arguments>
+<msg timestamp="20230905 17:35:35.856" level="INFO">Typing text 'les berge du Lac' into text field '//input[@id="address1"]'.</msg>
+<status status="PASS" starttime="20230905 17:35:35.856" endtime="20230905 17:35:36.133"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${adress2}</arg>
+<arg>${adr2}</arg>
+</arguments>
+<msg timestamp="20230905 17:35:36.135" level="INFO">Typing text 'a' into text field '//input[@id="address2"]'.</msg>
+<status status="PASS" starttime="20230905 17:35:36.134" endtime="20230905 17:35:36.321"></status>
+</kw>
+<kw name="Select From List By Label" library="Selenium2Library">
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<arguments>
+<arg>${list_box_pays}</arg>
+<arg>${pays_valeurs}</arg>
+</arguments>
+<msg timestamp="20230905 17:35:36.321" level="INFO">Selecting options from selection list '//select[@name="country"]' by label Canada.</msg>
+<status status="PASS" starttime="20230905 17:35:36.321" endtime="20230905 17:35:36.504"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${etat}</arg>
+<arg>${etat_global}</arg>
+</arguments>
+<msg timestamp="20230905 17:35:36.505" level="INFO">Typing text 'marié' into text field '//input[@id="state"]'.</msg>
+<status status="PASS" starttime="20230905 17:35:36.504" endtime="20230905 17:35:36.739"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${ville}</arg>
+<arg>${ville_global}</arg>
+</arguments>
+<msg timestamp="20230905 17:35:36.739" level="INFO">Typing text 'tunis' into text field '//input[@id="city"]'.</msg>
+<status status="PASS" starttime="20230905 17:35:36.739" endtime="20230905 17:35:36.968"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${code_postal}</arg>
+<arg>${code_postal_global}</arg>
+</arguments>
+<msg timestamp="20230905 17:35:36.969" level="INFO">Typing text '8000' into text field '//input[@id="zipcode"]'.</msg>
+<status status="PASS" starttime="20230905 17:35:36.969" endtime="20230905 17:35:37.195"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${num_tel}</arg>
+<arg>${num_tel_global}</arg>
+</arguments>
+<msg timestamp="20230905 17:35:37.196" level="INFO">Typing text '72345667' into text field '//input[@id="mobile_number"]'.</msg>
+<status status="PASS" starttime="20230905 17:35:37.195" endtime="20230905 17:35:37.457"></status>
+</kw>
+<status status="PASS" starttime="20230905 17:35:35.128" endtime="20230905 17:35:37.457"></status>
+</kw>
+<kw name="Cliquez sur le bouton &quot;Créer un compte&quot;" library="Function_EU">
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>${bouton_cree_compte}</arg>
+</arguments>
+<msg timestamp="20230905 17:35:37.460" level="INFO">Clicking button '(//button[@type="submit"])[1]'.</msg>
+<status status="PASS" starttime="20230905 17:35:37.459" endtime="20230905 17:35:39.309"></status>
+</kw>
+<status status="PASS" starttime="20230905 17:35:37.457" endtime="20230905 17:35:39.309"></status>
+</kw>
+<kw name="Vérifiez que 'COMPTE CRÉÉ !' est visible" library="Function_EU">
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>${visibilite_compte_cree}</arg>
+<arg>30</arg>
+</arguments>
+<status status="PASS" starttime="20230905 17:35:39.309" endtime="20230905 17:35:39.414"></status>
+</kw>
+<kw name="Element Should Contain" library="Selenium2Library">
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<arguments>
+<arg>${visibilite_compte_cree}</arg>
+<arg>Congratulations! Your new account has been successfully</arg>
+</arguments>
+<msg timestamp="20230905 17:35:39.492" level="INFO">Element '//div[@class="col-sm-9 col-sm-offset-1"]' contains text 'Congratulations! Your new account has been successfully'.</msg>
+<status status="PASS" starttime="20230905 17:35:39.415" endtime="20230905 17:35:39.492"></status>
+</kw>
+<status status="PASS" starttime="20230905 17:35:39.309" endtime="20230905 17:35:39.493"></status>
+</kw>
+<kw name="Cliquez sur le bouton &quot;Continuer&quot;" library="Function_EU">
+<kw name="Click Link" library="Selenium2Library">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>${bouton_continu}</arg>
+</arguments>
+<msg timestamp="20230905 17:35:39.495" level="INFO">Clicking link '//a[@class="btn btn-primary"]'.</msg>
+<status status="PASS" starttime="20230905 17:35:39.494" endtime="20230905 17:35:43.084"></status>
+</kw>
+<status status="PASS" starttime="20230905 17:35:39.493" endtime="20230905 17:35:43.084"></status>
+</kw>
+<kw name="Vérifiez que &quot;Connecté en tant que nom d'utilisateur&quot; est visib" library="Fuction_Global">
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>${verification_visibilite_compte_cree}</arg>
+</arguments>
+<status status="PASS" starttime="20230905 17:35:43.084" endtime="20230905 17:35:43.140"></status>
+</kw>
+<kw name="Element Should Contain" library="Selenium2Library">
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<arguments>
+<arg>${verification_visibilite_compte_cree}</arg>
+<arg>${nom_uti_ins_global}</arg>
+</arguments>
+<msg timestamp="20230905 17:35:43.207" level="INFO">Element '//ul[@class="nav navbar-nav"]' contains text 'daoud'.</msg>
+<status status="PASS" starttime="20230905 17:35:43.140" endtime="20230905 17:35:43.207"></status>
+</kw>
+<status status="PASS" starttime="20230905 17:35:43.084" endtime="20230905 17:35:43.208"></status>
+</kw>
+<kw name="Cliquez sur le bouton &quot;Supprimer le compte&quot;" library="Fuction_Global">
+<kw name="Click Link" library="Selenium2Library">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>${bouton_Supprimer_compte}</arg>
+</arguments>
+<msg timestamp="20230905 17:35:43.210" level="INFO">Clicking link '//a[@href="/delete_account"]'.</msg>
+<status status="PASS" starttime="20230905 17:35:43.210" endtime="20230905 17:35:43.793"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>${verification_visibilite_compte_supprimer}</arg>
+</arguments>
+<status status="PASS" starttime="20230905 17:35:43.793" endtime="20230905 17:35:43.893"></status>
+</kw>
+<status status="PASS" starttime="20230905 17:35:43.209" endtime="20230905 17:35:43.894"></status>
+</kw>
+<kw name="Vérifiez que 'COMPTE SUPPRIMÉ !' est visible et cliquez sur le bouton 'Continuer'" library="Fuction_Global">
+<kw name="Element Should Contain" library="Selenium2Library">
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<arguments>
+<arg>${verification_visibilite_compte_supprimer}</arg>
+<arg>Your account has been permanently deleted!</arg>
+</arguments>
+<msg timestamp="20230905 17:35:43.937" level="INFO">Element '//div[@class="col-sm-9 col-sm-offset-1"]' contains text 'Your account has been permanently deleted!'.</msg>
+<status status="PASS" starttime="20230905 17:35:43.895" endtime="20230905 17:35:43.937"></status>
+</kw>
+<kw name="Click Link" library="Selenium2Library">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>${bouton_continu_sup}</arg>
+</arguments>
+<msg timestamp="20230905 17:35:43.938" level="INFO">Clicking link '//a[@class="btn btn-primary"]'.</msg>
+<status status="PASS" starttime="20230905 17:35:43.937" endtime="20230905 17:35:46.814"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>${page_home}</arg>
+</arguments>
+<status status="PASS" starttime="20230905 17:35:46.814" endtime="20230905 17:35:46.876"></status>
+</kw>
+<status status="PASS" starttime="20230905 17:35:43.894" endtime="20230905 17:35:46.876"></status>
+</kw>
+<kw name="fermer_navigateur" library="Fuction_Global">
+<kw name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230905 17:35:46.878" endtime="20230905 17:35:51.522"></status>
+</kw>
+<status status="PASS" starttime="20230905 17:35:46.877" endtime="20230905 17:35:51.523"></status>
+</kw>
+<status status="PASS" starttime="20230905 17:35:23.946" endtime="20230905 17:35:51.523" critical="yes"></status>
+</test>
+<status status="PASS" starttime="20230905 17:35:23.848" endtime="20230905 17:35:51.525"></status>
+</suite>
+<status status="PASS" starttime="20230905 17:35:23.845" endtime="20230905 17:35:51.530"></status>
+</suite>
+<suite id="s1-s6" name="Formulaire de contact" source="D:\AutomationExercice_VS\Suite_de_test\Formulaire de contact">
+<suite id="s1-s6-s1" name="TC6 Formulaire contact" source="D:\AutomationExercice_VS\Suite_de_test\Formulaire de contact\TC6_Formulaire_contact.robot">
+<test id="s1-s6-s1-t1" name="Formulaire contact">
+<kw name="Lancer le navigateur" library="Fuction_Global">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>about:blank</arg>
+<arg>gc</arg>
+</arguments>
+<msg timestamp="20230905 17:35:51.575" level="INFO">Opening browser 'gc' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20230905 17:35:51.575" endtime="20230905 17:35:55.596"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230905 17:35:55.596" endtime="20230905 17:35:55.938"></status>
+</kw>
+<status status="PASS" starttime="20230905 17:35:51.575" endtime="20230905 17:35:55.939"></status>
+</kw>
+<kw name="Accédez à l'URL 'http://automationexercise.com'" library="Fuction_Global">
+<kw name="Go To" library="Selenium2Library">
+<doc>Navigates the active browser instance to the provided ``url``.</doc>
+<arguments>
+<arg>${url_site}</arg>
+</arguments>
+<msg timestamp="20230905 17:35:55.941" level="INFO">Opening url 'http://automationexercise.com'</msg>
+<status status="PASS" starttime="20230905 17:35:55.940" endtime="20230905 17:35:59.805"></status>
+</kw>
+<status status="PASS" starttime="20230905 17:35:55.939" endtime="20230905 17:35:59.806"></status>
+</kw>
+<kw name="Vérifiez que la page d'accueil est visible avec succès" library="Fuction_Global">
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>${bouton_inscrire_seconnecter}</arg>
+<arg>30</arg>
+</arguments>
+<status status="PASS" starttime="20230905 17:35:59.809" endtime="20230905 17:35:59.918"></status>
+</kw>
+<status status="PASS" starttime="20230905 17:35:59.807" endtime="20230905 17:35:59.919"></status>
 </kw>
 <kw name="Cliquez sur le bouton « Contactez-nous »" library="Function_Formulaire_contact">
 <kw name="Click Link" library="Selenium2Library">
@@ -46,10 +946,10 @@
 <arguments>
 <arg>${bouton_contacter_nous_xpth}</arg>
 </arguments>
-<msg timestamp="20230824 16:21:39.042" level="INFO">Clicking link '//a[@href="/contact_us"]'.</msg>
-<status status="PASS" starttime="20230824 16:21:39.040" endtime="20230824 16:21:40.088"></status>
+<msg timestamp="20230905 17:35:59.921" level="INFO">Clicking link '//a[@href="/contact_us"]'.</msg>
+<status status="PASS" starttime="20230905 17:35:59.920" endtime="20230905 17:36:00.922"></status>
 </kw>
-<status status="PASS" starttime="20230824 16:21:39.039" endtime="20230824 16:21:40.089"></status>
+<status status="PASS" starttime="20230905 17:35:59.919" endtime="20230905 17:36:00.923"></status>
 </kw>
 <kw name="Vérifiez que « GET IN TOUCH » est visible" library="Function_Formulaire_contact">
 <kw name="Element Should Be Visible" library="Selenium2Library">
@@ -57,26 +957,47 @@
 <arguments>
 <arg>${visibilite_GET_IN_TOUCH}</arg>
 </arguments>
-<msg timestamp="20230824 16:21:40.165" level="INFO">Element '(//h2[@class="title text-center"])[1]' is displayed.</msg>
-<status status="PASS" starttime="20230824 16:21:40.101" endtime="20230824 16:21:40.166"></status>
+<msg timestamp="20230905 17:36:00.995" level="INFO">Element '(//h2[@class="title text-center"])[1]' is displayed.</msg>
+<status status="PASS" starttime="20230905 17:36:00.925" endtime="20230905 17:36:00.995"></status>
 </kw>
-<status status="PASS" starttime="20230824 16:21:40.100" endtime="20230824 16:21:40.166"></status>
+<status status="PASS" starttime="20230905 17:36:00.923" endtime="20230905 17:36:00.995"></status>
 </kw>
-<status status="PASS" starttime="20230824 16:21:26.775" endtime="20230824 16:21:40.168" critical="yes"></status>
+<status status="PASS" starttime="20230905 17:35:51.575" endtime="20230905 17:36:00.995" critical="yes"></status>
 </test>
-<status status="PASS" starttime="20230824 16:21:25.753" endtime="20230824 16:21:40.171"></status>
+<status status="PASS" starttime="20230905 17:35:51.541" endtime="20230905 17:36:00.997"></status>
+</suite>
+<status status="PASS" starttime="20230905 17:35:51.532" endtime="20230905 17:36:01.002"></status>
+</suite>
+<status status="FAIL" starttime="20230905 17:34:30.961" endtime="20230905 17:36:01.006"></status>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0">Critical Tests</stat>
-<stat pass="1" fail="0">All Tests</stat>
+<stat pass="5" fail="1">Critical Tests</stat>
+<stat pass="5" fail="1">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" id="s1" name="Tc6 Formulaire Contact">Tc6 Formulaire Contact</stat>
+<stat pass="5" fail="1" id="s1" name="Suite de test">Suite de test</stat>
+<stat pass="0" fail="1" id="s1-s1" name="Connectez-vous avec l'adresse e-mail et le mot de passe corrects">Suite de test.Connectez-vous avec l'adresse e-mail et le mot de passe corrects</stat>
+<stat pass="0" fail="1" id="s1-s1-s1" name="TC2 Connexion valide">Suite de test.Connectez-vous avec l'adresse e-mail et le mot de passe corrects.TC2 Connexion valide</stat>
+<stat pass="1" fail="0" id="s1-s2" name="Connexion avec une adresse e-mail et un mot de passe incorrects">Suite de test.Connexion avec une adresse e-mail et un mot de passe incorrects</stat>
+<stat pass="1" fail="0" id="s1-s2-s1" name="TC3 Connexion Invalide">Suite de test.Connexion avec une adresse e-mail et un mot de passe incorrects.TC3 Connexion Invalide</stat>
+<stat pass="1" fail="0" id="s1-s3" name="Déconnecter Utilisateur">Suite de test.Déconnecter Utilisateur</stat>
+<stat pass="1" fail="0" id="s1-s3-s1" name="TC4 Déconnecter Utilisateur">Suite de test.Déconnecter Utilisateur.TC4 Déconnecter Utilisateur</stat>
+<stat pass="1" fail="0" id="s1-s4" name="Enregistrer un utilisateur avec une adresse e-mail existante">Suite de test.Enregistrer un utilisateur avec une adresse e-mail existante</stat>
+<stat pass="1" fail="0" id="s1-s4-s1" name="TC5 enregister utilisateur mail-existante">Suite de test.Enregistrer un utilisateur avec une adresse e-mail existante.TC5 enregister utilisateur mail-existante</stat>
+<stat pass="1" fail="0" id="s1-s5" name="Enregistrer utilisateur">Suite de test.Enregistrer utilisateur</stat>
+<stat pass="1" fail="0" id="s1-s5-s1" name="TC1 Enregistrer utilisateur">Suite de test.Enregistrer utilisateur.TC1 Enregistrer utilisateur</stat>
+<stat pass="1" fail="0" id="s1-s6" name="Formulaire de contact">Suite de test.Formulaire de contact</stat>
+<stat pass="1" fail="0" id="s1-s6-s1" name="TC6 Formulaire contact">Suite de test.Formulaire de contact.TC6 Formulaire contact</stat>
 </suite>
 </statistics>
 <errors>
+<msg timestamp="20230905 17:34:32.052" level="WARN">Imported resource file 'D:\AutomationExercice_VS\Suite_de_test\Connectez-vous avec l'adresse e-mail et le mot de passe corrects\Config connexion valide\Config connexion valide.robot' is empty.</msg>
+<msg timestamp="20230905 17:34:40.031" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=116.0.5845.141)
+</msg>
 </errors>
 </robot>
